@@ -1,0 +1,2288 @@
+:: StoryTitle
+Dysfluent
+
+
+:: StoryData
+{
+  "ifid": "CAB07C18-1954-43AF-A3B2-5DCAAA38A621",
+  "format": "Harlowe",
+  "format-version": "3.3.4",
+  "start": "Title Screen Permanent",
+  "tag-colors": {
+    "n": "purple",
+    "header": "green",
+    "s": "red",
+    "f": "orange",
+    "h": "green",
+    "footer": "green",
+    "cut/leftovers": "yellow",
+    "sidebar": "green",
+    "todont": "yellow",
+    "startup": "blue"
+  },
+  "zoom": 0.6
+}
+
+
+:: !Welcome to my code! [cut/leftovers] {"position":"3225,50","size":"100,100"}
+This project has gone through several iterations (a major factor in the code being so messy throughout the game), and various little things have been cut out along the way.
+
+But I like to keep records of my tests, tools and snippets of writing (even when they're bad or completely obsolete), so I didn't want to just delete all of it! 
+
+I've left most of the unused stuff in here - all passage names starting with "z" - in case anyone else might be interested in them too.
+
+I'd love to hear if anyone finds this page; if you feel like it, you can shoot me a message at allyson_gray@hotmail.com!
+
+Thank you for your interest in my humble game. ☺
+
+
+:: About {"position":"50,50","size":"100,100"}
+{(display: "Close About")
+}(if: $dalton is false)[Dysfluent is a short narrative centered around communication, which (colour:$fluent)[uses colours to indicate] (colour: $dysfluent)[the difficulty of delivering] (colour: $verydysfluent)[different dialog options.]](else:)[Dysfluent is a short narrative centered around communication, which (colour:$fluent)[uses colours to indicate] (colour:$dysfluent)[the difficulty of delivering] (colour: $verydysfluent)[different dialog options.]]
+Your goal is simply to get through the day, accomplishing your objectives as best as you can (and, hopefully, finding a bit of happiness along the way).
+Progress is saved automatically in your browser's cookies, so don't be afraid to leave mid-playthrough!
+
+
+:: Achievements {"position":"550,50","size":"100,100"}
+{(display: "Close Achievements")
+}''But at what cost?''
+(if:$AchVeryCovertGOT is 1)[Be as fluent as possible.](else:)[??????????]
+
+''Secret identity''
+(if:$AchCovertGOT is 1)[Try to hide your stutter.](else:)[??????????]
+
+''On the fence''
+(if:$AchNeutralGOT is 1)[Equal parts overt and covert.](else:)[??????????]
+
+''True to myself''
+(if:$AchOvertGOT is 1)[Try to speak your mind.](else:)[??????????]
+
+''Hear me roar''
+(if:$AchVeryOvertGOT is 1)[Stutter completely openly.](else:)[??????????]
+
+''Hold the line''
+(if:$AchPhoneGOT is 1)[Get hung up on.](else:)[??????????]
+
+''Satisfied''
+(if:$AchSatisfiedGOT is 1)[Eat a delicious meal.](else:)[??????????]
+
+''Queasy''
+(if:$AchQueasyGOT is 1)[Eat a horrid meal.](else:)[??????????]
+
+''I'll have what she's having''
+(if:$AchSallyGOT is 1)[Copy your friend.](else:)[??????????]
+
+''The magic word''
+(if:$AchMagicGOT is 1)[Utter the magic word.](else:)[??????????]
+
+''The OTHER magic word''
+(if:$AchOtherMagicGOT is 1)[Be exceedingly polite.](else:)[??????????]
+
+''Shut up''
+(if:$AchShutUpGOT is 1)[Keep it to yourself.](else:)[??????????]
+
+
+:: Ask Question in Class [f s] {"position":"1775,500","size":"100,100"}
+(if:$anim is not true)[(set: $typewriterText to "12 years old
+Math class"){
+(display: "Typewriter")}](else:)[//12 years old
+Math class//](if:$anim is not true)[(set:$ani to 1.25)]
+
+(live:$ani*3s)[It's still early in the school year, and you're listening to the new math teacher recite answers as your eyes scan your exercise book. Your brow furrows in surprise as you realize that one of your answers is different from the one he gave.(stop:)]
+
+(live:$ani*13s)[You raise your hand and he gestures for you to speak.(stop:)]
+(live:$ani*16s)["Remind me what your name is?"(stop:)]
+
+(live:$ani*18.5s)["It's,(stop:)] (live:$ani*19s)[um...(stop:)] (live:$ani*20s)[uh..."(stop:)]
+
+(live:$ani*21s)["Forget your name?"(stop:)]
+
+(live:$ani*22s)[Your classmates laugh.(stop:)] (live:$ani*24s)[You're still struggling to push out the letter (print:$name's 1st) when he changes the subject with a wave of the hand.(stop:)]
+
+(live:$ani*27s)["What was your question?"(stop:)]
+
+(live:$ani*30s)["For the so...(stop:)] (live:$ani*31s)[um, the solution to...(stop:)] (live:$ani*32.5s)[to...(stop:)] (live:$ani*33s)[to...(stop:)] (live:$ani*33.5s)[to n-number...(stop:)] (live:$ani*35s)[to number f-f-five,(stop:)] (live:$ani*37s)[would it be okay to use a p-p-p-p-p-p...(stop:)] (live:$ani*40s)[a p-percent...(stop:)] (live:$ani*41s)[a percent...(stop:)] (live:$ani*42s)[percent...(stop:)] (live:$ani*43s)[percentage in...(stop:)] (live:$ani*44.5s)[in...(stop:)] (live:$ani*45s)[in...(stop:)](live:$ani*45.5s)[stead(stop:)] (live:$ani*46.5s)[of a ffff...(stop:)] (live:$ani*47.5s)[frac...(stop:)](live:$ani*48s)[action?"(stop:)]
+
+(live:$ani*50s)[He just looks at you for a moment.] (live:$ani*52s)[Maybe he didn't understand you?(stop:)]
+
+(live:$ani*54s)[He looks at the rest of the class.(stop:)] (live:$ani*54.5s)["Anyway..."(stop:)]
+
+(live:$ani*55.5s)[Pretending like you never spoke at all, he moves onto the next exercise and resumes his explanations.(stop:)]
+
+(live:$ani*60.5s)[(colour:$links)[(t8n: "fade")[[[- I feel dejected. Speaking up was a mistake...|Job Interview]]]]
+(colour:$links)[(t8n: "fade")[[[- I feel angry. I want my voice to be heard!|Job Interview]]]]
+(colour:$links)[(t8n: "fade")[[[- I feel confused. What am I supposed to do now?|Job Interview]]]] (stop:)(if:$anim is not true)[(set:$ani to 1)]]
+
+
+
+
+:: Clementine [todont] {"position":"2150,600","size":"100,100"}
+A few hours later, you're meeting up with Clementine and finding a nice spot to talk things out. 
+It's been a while since you've seen each other one-on-one, and you have a lot to catch up on.
+
+She confides in you about troubles with her partner, and you nod understandingly as she lets out all her worries.
+
+(colour:$verydysfluent)[- (Give her the best advice and support you can.)]<advice|
+
+(click:?advice)[(go-to:"Good Conversation")]
+
+
+:: Close About {"position":"50,300","size":"100,100"}
+|opa>[(colour:black)[''▼ About'']]
+(click: ?opa)[(replace: ?about)[(display: "Open About")]]
+
+
+:: Close Achievements {"position":"550,300","size":"100,100"}
+	|opach>[(colour:black)[''▼ Achievement list'']]
+(click: ?opach)[(replace: ?achievements)[(display: "Open Achievements")]]
+
+
+:: Close Credits {"position":"175,300","size":"100,100"}
+|opt>[(colour:black)[''▼ Credits'']]
+(click: ?opt)[(replace: ?credits)[(display: "Open Credits")]]
+
+
+:: Close Extras {"position":"425,300","size":"100,100"}
+|ope>[(colour:black)[''▼ Extras'']]
+(click: ?ope)[(replace: ?extras)[(display: "Open Extras")]]
+
+
+:: Close Options {"position":"300,300","size":"100,100"}
+|opo>[(colour:black)[''▼ Options'']]
+(click: ?opo)[(replace: ?options)[(display: "Open Options")]]
+
+
+:: Clothes Picked {"position":"650,700","size":"100,100"}
+You finish up your preparations and get dressed. 
+
+The only thing left to do before leaving is call the store to ensure your friend's birthday present will be ready for pickup. 
+
+She requested a new and popular card game, and as they're apparently flying off the shelves, you'd better call the store as it opens to make sure there's a copy set aside for you.
+
+Unfortunately, phone calls tend to aggravate your stutter and make your blocks all the more inconvenient (due in part to the lack of nonverbal communication). (colour:$links)[[[Hopefully this one will go smoothly!|Phone Call Start]]]
+
+
+:: Credits {"position":"175,50","size":"100,100"}
+{(display: "Close Credits")
+}[Written and developed by Allyson Gray.
+These awesome people graciously volunteered their time as playtesters and provided very insightful feedback:
+- Mia "the best daughter ever" Parker
+- Pigeon
+- Abdallah Said
+- Craig Kogan
+- fae
+- Unknown human
+Special thanks to the talented folks who developed Twine and Harlowe, as well as those who contribute their knowledge to help other users on IF forums.
+Extra special thanks to my partner Alex for his invaluable moral and technical support!
+
+For any issues, questions, comments and all other chatter, you can contact the author at allyson&#95gray@hotmail.com. Messages are always greatly appreciated!]
+
+
+:: Dessert {"position":"1400,700","size":"100,100"}
+(if:$joking is 4)[You decide to stay quiet as your friends joke around.<script>showAch("ach2")</script> 
+(replace: ?AchTxt2)[(css: "font-size: 20px")[(text-style:"underline")[  ''Shut up''  ]
+Keep it to yourself.] ](set:$AchShutUp to 1)]The rest of the meal goes by fairly uneventfully. You manage to sprinkle some comments here and there, but for the most part everyone is too busy eating to talk much. You (if:$foodchoice is 1)[happily savour](if:$foodchoice is 2)[reluctantly choke down](if:$foodchoice is 3)[enjoy] your food, and still feel a bit peckish after finishing it. 
+Clementine offers to buy you dessert. A grateful smile finds its way to your lips as you process her offer. You're really in the mood for something sweet!
+
+When the waitress makes her rounds, what do you order?
+
+(colour:$dysfluent)[- Ice cream.]<ice|
+(colour:$dysfluent)[- Cake.]<cake|
+(colour:$dysfluent)[- Fruit salad.]<fruit|
+(colour:$links)[- Nothing.]<no|
+
+(click:?ice)[(set:$dessert to "cream")(set:$covertness to it - 5)(go-to:"Trivia Game")]
+(click:?cake)[(set:$dessert to "cake")(set:$covertness to it - 5)(go-to:"Trivia Game")]
+(click:?fruit)[(set:$dessert to "fruit")(set:$covertness to it - 5)(go-to:"Trivia Game")]
+(click:?no)[(set:$dessert to "no")(set:$covertness to it + 5)(go-to:"Trivia Game")]
+
+(if:$foodchoice is 2)[<script>showAch("ach1")</script>
+(replace: ?AchTxt1)[(css: "font-size: 20px")[(text-style:"underline")[  ''Queasy''  ]
+Eat a horrid meal.]] ]
+
+(if:$foodchoice is 1)[<script>showAch("ach1")</script>
+(replace: ?AchTxt1)[(css: "font-size: 20px")[(text-style:"underline")[  ''Satisfied''  ]
+Eat a delicious meal.]] ]
+
+(if:$foodchoice is 3)[<script>showAch("ach1")</script>
+(replace: ?AchTxt1)[(css: "font-size: 20px")[(text-style:"underline")[  ''I'll have what she's having''  ]
+Copy your friend.]] ]
+
+
+:: Dream [n s] {"position":"350,600","size":"100,100"}
+{(set:$gamestate to 0)
+(set:$startedgame to 1)
+(set:$call to false)
+(set:$store to false)
+(set:$lunch to false)
+(set:$clean to false)
+(set:$job to false)
+(set:$AchVeryCovert to 0)
+(set:$AchCovert to 0)
+(set:$AchNeutral to 0)
+(set:$AchOvert to 0)
+(set:$AchVeryOvert to 0)
+(set:$AchPhone to 0)
+(set:$AchSatisfied to 0)
+(set:$AchQueasy to 0)
+(set:$AchSally to 0)
+(set:$AchMagic to 0)
+(set:$AchOtherMagic to 0)
+(set:$AchShutUp to 0)
+(set:$silence to 0)
+(set: $covertstat to "?")
+(set: $covertness to "?")
+}(live:$ani* 27s)[(colour: #b2b0a6)["Well, it was nice meeting you!] (stop:)](live:$ani* 30s)[(colour: #b2b0a6)[ I'm looking forward to working with you.] (stop:)]
+(live:$ani* 33s)[(colour: #b2b0a6)[I'm Eric, by the way.] (stop:)] 
+(live:$ani* 37s)[(colour: #b2b0a6)[**What's your name?**"] (stop:)] 
+
+(live:$ani* 0.75s)[//tick,//(stop:)](live:$ani*1.75s)[// tock,//(stop:)](live:$ani*2.75s)[// tick,//(stop:)](live:$ani*3.75s)[// tock,//(stop:)](live:$ani*4.75s)[// tick,//(stop:)](live:$ani*5.75s)[// tock...//(stop:)]
+
+(live:$ani* 8s)[He looks at you expectantly as the office clock ticks on. (stop:)]
+(live:$ani* 12s)[You are keenly aware of every second that passes;(stop:)](live:$ani* 16s)[ each one adds another layer to your embarrassment. (stop:)]
+
+(live:$ani* 20s)[Why? (stop:)] (set:$name to "")
+
+(live:$ani* 22.5s)[Why can't you answer? (stop:)]
+
+(live:$ani* 41s)[Come on, just say it. It should be so easy. Just tell him your (colour:$links)[name]<nameCl|... (stop:)] 
+
+(click: ?nameCl)[(set: _default to " ") (for: each _i, ...(range:1,6))[(if: (trimmed: $name) is "")[(set: $name to (trimmed: (upperfirst: (prompt: "What's your name?", _default, "", "Confirm")))) (if: _i > 4)[(set: _default to "Anonymous")] ] ] 
+
+(if: (trimmed: $name) is "")[(set:$name to "Anonymous")](goto: "Name") ]
+
+
+
+
+:: Dry Cleaning {"position":"1700,600","size":"100,100"}
+You all part ways shortly afterwards, and it doesn't take long for you to get to the dry cleaners'.
+A gentleman with greying hair greets you warmly as you walk in.
+
+"Hi! I'm here to pick up an item." You hand him your ticket.
+
+"All right!" he operates the conveyor and your garment comes into view. 
+"Nice clothes! Going anywhere fancy?"
+
+(colour:$fluent)[- "I have a big job interview tonight!"]<1|
+(colour:$fluent)[- "Nah, these are just my pyjamas!"]<2|
+(colour:$fluent)[- "Yeah, you could say that."]<3|
+
+(click:?1)[(set:$dryclean to 1)(go-to:"Dry Cleaning Cont")]
+(click:?2)[(set:$dryclean to 2)(go-to:"Dry Cleaning Cont")]
+(click:?3)[(set:$dryclean to 3)(go-to:"Dry Cleaning Cont")]
+
+
+:: Dry Cleaning Cont {"position":"1700,700","size":"100,100"}
+{(if:$dryclean is 1)["I have a big job interview tonight!"]
+(if:$dryclean is 2)["Nah, these are just my pyjamas!"]
+(if:$dryclean is 3)["Yeah, you could say that."]}
+
+Unfortunately, a car outside honks right as you're talking.
+
+"Heh, sorry, what did you say?"
+
+Ugh. Now you've completely lost your momentum!
+
+(colour:$dysfluent)[- "I have a big job interview tonight!"]<1|
+(colour:$dysfluent)[- "Nah, these are just my pyjamas!"]<2|
+(colour:$dysfluent)[- "Yeah, you could say that."]<3|
+(colour:$fluent)[- ..."Never mind."]<4|
+
+(click:?1)[(set:$repeat to 1)(set:$covertness to it - 5)(go-to: "Leave Dry Cleaner")]
+(click:?2)[(set:$repeat to 2)(set:$covertness to it - 5)(go-to: "Leave Dry Cleaner")]
+(click:?3)[(set:$repeat to 3)(set:$covertness to it - 5)(go-to: "Leave Dry Cleaner")]
+(click:?4)[(set:$repeat to 4)(set:$covertness to it + 5)(go-to: "Leave Dry Cleaner")]
+
+
+:: Epilogue [todont] {"position":"2250,1000","size":"100,100"}
+Thank you for playing //Dysfluent//! (set:$complete to true)
+{
+(if: $covertness is 150)[(set: $AchVeryCovert to 1) <script>showAch("ach2")</script> 
+(replace: ?AchTxt2)[(css: "font-size: 20px")[(text-style:"underline")[  ''But at what cost?''  ]<br>
+Be as fluent as possible.]]]
+
+(if: $covertness is > 90)[(set: $AchCovert to 1) <script>showAch("ach1")</script> 
+(replace: ?AchTxt1)[(css: "font-size: 20px")[(text-style:"underline")[  ''Secret identity''  ]<br>
+Try to hide your stutter.]]]
+
+(if: $covertness is >= 10 and $covertness is <= 90)[(set: $AchNeutral to 1) <script>showAch("ach2")</script> 
+(replace: ?AchTxt2)[(css: "font-size: 20px")[(text-style:"underline")[  ''On the fence''  ]<br>
+Equal parts overt and covert.]]]
+
+(if: $covertness is < 10)[(set: $AchOvert to 1) <script>showAch("ach1")</script> 
+(replace: ?AchTxt1)[(css: "font-size: 20px")[(text-style:"underline")[ ''True to myself'' ]<br>
+Try to speak your mind.]]]
+
+(if: $covertness is -50)[(set: $AchVeryOvert to 1)<script>showAch("ach2")</script> 
+(replace: ?AchTxt2)[(css: "font-size: 20px")[(text-style:"underline")[  ''Hear me roar''  ]<br>
+Stutter completely openly.]]]
+
+}
+Here are the achievements you unlocked during this playthrough:
+
+(if:$AchVeryCovert is 1)[''But at what cost?'' - Be as fluent as possible.
+(set:$AchVeryCovertGOT to 1)]{
+
+}(if:$AchCovert is 1)[''Secret identity'' - Try to hide your stutter.
+(set:$AchCovertGOT to 1)]{
+
+}(if:$AchNeutral is 1)[''On the fence'' - Equal parts overt and covert.
+(set:$AchNeutralGOT to 1)]{
+
+}(if:$AchOvert is 1)[''True to myself'' - Try to speak your mind.
+(set:$AchOvertGOT to 1)]{
+
+}(if:$AchVeryOvert is 1)[''Hear me roar'' - Stutter completely openly.
+(set:$AchVeryOvertGOT to 1)]{
+
+}(if:$AchPhone is 1)[''Hold the line'' - Get hung up on.
+(set:$AchPhoneGOT to 1)]{
+
+}(if:$AchSatisfied is 1)[''Satisfied'' - Eat a delicious meal.
+(set:$AchSatisfiedGOT to 1)]{
+
+}(if:$AchQueasy is 1)[''Queasy'' - Eat a horrid meal.
+(set:$AchQueasyGOT to 1)]{
+
+}(if:$AchSally is 1)[''I'll have what she's having'' - Copy your friend.
+(set:$AchSallyGOT to 1)]{
+
+}(if:$AchMagic is 1)[''The magic word'' - Utter the magic word.
+(set:$AchMagicGOT to 1)]{
+
+}(if:$AchOtherMagic is 1)[''The OTHER magic word'' - Be exceedingly polite.
+(set:$AchOtherMagicGOT to 1)]{
+
+}(if:$AchShutUp is 1)[''Shut up'' - Keep it to yourself. (set:$AchShutUpGOT to 1)]
+
+If you'd like to try doing another playthrough, be sure to check out the Extras on the title screen! 
+You'll find options to disable text animations and display your covertness stat, as well as a list of all achievements.
+
+(colour:$links)[End the game and return to the title screen.]<end|
+
+(click:?end)[(set:$gamestate to 1)(go-to:"Title Screen Permanent")]
+
+
+:: Exit Store {"position":"1100,700","size":"100,100"}
+Game in hand, you leave the mall and head towards the restaurant where you're meeting your friends for lunch (which is conveniently within walking distance). (set:$bestfood to "")(set:$worstfood to "")
+
+You're already drooling at the thought of the meal awaiting you. You looked up the menu earlier and were delighted to note that they have (colour:$links)[your favourite food]<bestfood|: []<choosebest|
+
+(more:)[Coincidentally they also serve |worstfood>[(colour:$links)[your //least// favourite food]], []<chooseworst|
+
+(more:)[As the building comes into view, you feel anticipation bubbling up.
+
+You love spending time with your friends, but talking can still feel daunting even around them.
+Your (if:$fluency is 3)[occasional](if:$fluency is 1)[frequent] blocks certainly don't go unnoticed, and anyone close to you is probably used to them – but you're not sure anyone understands your condition as anything more than a strange quirk.
+
+Early attempts to discuss it in your social circles were met with well-intentioned but misguided "I stutter too"s at best, and complete disinterest at worst. It's been years now and friends have come and gone, but you haven't had the heart to bring up the topic with any group ever since. 
+
+On that thought, you get to your destination and (colour:$links)[[[venture inside.|Meetup]]]] ]
+
+(click: ?bestfood)[(set: _default to " ") (for: each _i, ...(range:1,6))[(if: (trimmed: $bestfood) is "")[(set: $bestfood to (trimmed:(lowercase:(prompt: "What's your favourite food?", _default, "", "Confirm")))) (if: _i > 4)[(set: _default to "delicious air")] ] ] (if: (trimmed: $bestfood) is "")[(set:$bestfood to "delicious air")] (replace: ?choosebest)[$bestfood!] (replace: ?bestfood)[(colour:black)[your favourite food]] ]
+
+(click: ?worstfood)[(set: _default to " ") (for: each _i, ...(range:1,6))[(if: (trimmed: $worstfood) is "")[(set: $worstfood to (trimmed:(lowercase:(prompt: "What's your least favourite food?", _default, "", "Confirm")))) (if: _i > 4)[(set: _default to "noxious air")] ] (if: (trimmed: $bestfood) is "")[(set:$bestfood to "noxious air")] ] (replace: ?chooseworst)[$worstfood. You'd have to be pretty desperate to ever eat that!] (replace: ?worstfood)[(colour:black)[your //least// favourite food]] ]
+
+
+
+
+:: Extras {"position":"425,50","size":"100,100"}
+{(display: "Close Extras")
+}(if: $complete is true)[(checkbox: 2bind $anim, "Disable text animations")
+(checkbox: 2bind $stats, "Display your covertness stat")
+	|Achievements>[(display: "Open Achievements")]]{
+}(else:)[Come back after finishing the game!]
+
+
+:: Get Ready {"position":"650,600","size":"100,100"}
+{(if: $feeling is 1)[There are some stressful events up ahead, but you choose to focus on the positives! You're feeling good about the day and you believe you can pull through.]
+(if: $feeling is 2)[Having all of these social interactions (and a job interview, no less) scheduled on one of your "bad days" feels daunting. You really hope you can make it.]
+(if: $feeling is 3)[Torn between excitement and apprehension, you're anticipating the ups and downs that today will bring.]
+}
+
+You just have to focus on getting through the day, stay in control of your speech, and make a good impression on the interviewer tonight.
+
+Filled with (if: $feeling is 1)[excitement](if: $feeling is 2)[apprehension](if: $feeling is 3)[an indescribable mix of feelings], you get started on your morning routine, and choose your outfit for the casual restaurant party you're headed to:
+
+(colour:$links)[- Good old t-shirt and jeans – a classic look.]<tshirt|
+(colour:$links)[- A button-down shirt and dress pants – classy and versatile.]<bdshirt|
+(colour:$links)[- A tank top, sleeveless vest, and capri pants – stylish and funky.]<ttop|
+(colour:$links)[- A dress and stockings – both elegant and cute.]<dress|
+
+(click: ?tshirt)[(set: $clothes to "tshirt") (goto: "Clothes Picked")]
+(click: ?bdshirt)[(set: $clothes to "bdshirt") (goto: "Clothes Picked")]
+(click: ?ttop)[(set: $clothes to "ttop") (goto: "Clothes Picked")]
+(click: ?dress)[(set: $clothes to "dress") (goto: "Clothes Picked")]
+
+
+:: Good Conversation [todont] {"position":"2150,700","size":"100,100"}
+You start sharing some advice and comforting words, but predictably, you only get so far before your body starts fighting you. 
+
+It takes a lot of struggling and shifting words around, and much more time than you'd like, to finally get all of your thoughts out.
+
+Noticing that you unconsciously averted your gaze during your struggle, you turn back towards your friend and find an appreciative smile on her face as she takes in your words.
+
+"Sorry... I hope that was helpful."
+
+"It was! Honestly, I mostly just wanted to vent, but you actually gave me a lot to think about."
+
+(colour:$dysfluent)[[[- "I'm glad I could help!"|Stutter Talk]]]
+
+
+
+
+
+
+
+
+:: Header [header] {"position":"675,175","size":"100,100"}
+{
+<!-- Initialize Variables -->
+(if: $dark is 0)[(set: $dark to false)]
+(if: $dalton is 0)[(set: $dalton to false)]
+(if:$anim is true)[(set:$ani to 0)](else:)[(set:$ani to 1)]
+
+<!-- If a Saved game exists, load it. Also send Player to Permanent Title screen. -->
+(if:((passage:)'s name contains "Title Screen") and ((saved-games:) contains "Slot A"))[
+	(if: (history:)'s length is 0)[ <!-- If player refreshed browser, we need to reload the variables -->
+		(load-game:"Slot A")
+		(if: $currentpassage is 0)[(set: $currentpassage to "Dream")]
+		(go-to: "Title Screen Permanent")
+	]
+]
+
+<!-- If Player Reset All Progress and refreshed the browser, restart on Initial Title Screen -->
+(if: ((passage:)'s name is "Title Screen Permanent") and ($currentpassage is 0 and $dalton is not true))[
+	(go-to: "Title Screen 1st")
+]
+
+<!-- On the Title Screens, allow Player to change the game Options -->
+<!-- On all other screens, track which passage the Player played up to -->
+(if: (passage:)'s name contains "Title Screen")[
+	(if: $dark)[<script>setTheme("dark")</script>]
+	(else:)[<script>setTheme("")</script>]
+	(if: $dalton)[<script>setA11y("dalton")</script>]
+	(else:)[<script>setA11y("")</script>]
+]
+(else:)[
+	(set: $currentpassage to (passage:)'s name)
+]
+
+<!-- Save the game on every page visited (except the initial Title screen) -->
+(unless: (passage:)'s name is "Title Screen 1st")[
+	(save-game:"Slot A")
+]
+
+<!-- Populate the sidebar -->
+(append: ?sidebar)[ 
+<nobr>(if:$stats is true)[Covertness score<br>for the day:<br> $covertness (if:$covertness is 50)[(neutral)]]</nobr>
+
+
+|Ach1>[(css: "font-size: 20px")[''Achievement Unlocked!'']|AchBox>[|AchTxt1>[]]]
+|Ach2>[(css: "font-size: 20px")[''Achievement Unlocked!'']|AchBox>[|AchTxt2>[]]]
+
+|Todo>[
+	* |call>[Call the store]
+	* |store>[Get present]
+	* |lunch>[Meet friends]
+	* |clean>[Dry cleaners]
+	* |job>[Job interview]
+]
+
+<!-- Check if any ToDos are already Done, if so then check them off -->
+<script defer>toDoCheck()</script>
+
+<!-- Make the "Back to Title Screen" text clickable and have it take you there -->
+|Home>[**⭰**Back to title screen]
+<script>goHome();</script>
+
+]
+}
+
+
+:: Interview End 1 {"position":"1800,1000","size":"100,100"}
+{
+(if:$anim is not true)[(set:$ani to 1.25)]
+}(live:$ani*1s)["Gh...(stop:)] (live:$ani*2.5s)[kh... "(stop:)]
+(live:$ani*5s)[All you can manage is small, throaty sounds as you try to get over the biggest block of the day.(stop:)] (live:$ani*10s)[You try to rephrase things in your head, desperately looking for a way to say what you need to say.(stop:)]
+(live:$ani*15s)["Hh...(stop:)]
+(live:$ani*16s)[...(stop:)]
+(live:$ani*17s)[..."(stop:)]
+(live:$ani*19s)[Finally, you form a complete word.(stop:)] (live:$ani*21.5s)[Then another.(stop:)] (live:$ani*23s)[Then a few.(stop:)] (live:$ani*25s)[Slowly.(stop:)]
+(live:$ani*27s)[You struggle for what feels like hours as the interviewer stares expressionlessly, only looking away to take notes.(stop:)]
+(live:$ani*32s)[But little by little, you piece together a cohesive response,(stop:)] (live:$ani*38s)[and share several great learning experiences you've had in other workplaces.(stop:)]
+
+(live:$ani*44s)[The interview concludes shortly after. <script>toDone("job")</script> (set:$job to true)(stop:)]
+(live:$ani*46s)[His smile as he sees you out of the room is friendly yet distant, and you're left feeling very uncertain about your performance. You feel a pit in your stomach the whole way home, but take some comfort in knowing that you did everything you could.
+
+You go to bed that night wondering if you've let your inner child down. (colour:$links)[[[Can you really hope to achieve your goals?|Mocked by Peers]]] (stop:)(if:$anim is not true)[(set:$ani to 1)]]
+
+
+:: Interview End 2 {"position":"1900,1000","size":"100,100"}
+{
+(if:$anim is not true)[(set:$ani to 1.25)]
+}(live:$ani*1s)["Gh...(stop:)] (live:$ani*2.5s)[kh... "(stop:)]
+(live:$ani*5s)[All you can manage is small, throaty sounds as you try to get over the biggest block of the day.(stop:)] (live:$ani*10s)[Desperate to circumvent it as quickly as possible, you abandon most of your planned answers.(stop:)]
+(live:$ani*15s)["I...(stop:)]
+(live:$ani*17s)[um..."(stop:)]
+(live:$ani*19s)[Doing your best to avoid the ceaseless blocks, you trudge through the best approximation of a response you can piece together.(stop:)] (live:$ani*24s)[The interviewer stares expressionlessly, only looking away to take notes.(stop:)]
+(live:$ani*29.5s)[There is much that you've left unsaid, but you're afraid to open your mouth again.(stop:)]
+
+(live:$ani*33.5s)[The interview concludes shortly after. <script>toDone("job")</script> (set:$job to true) (stop:)]
+(live:$ani*35.5s)[His smile as he sees you out of the room is friendly yet distant, and you're left feeling very uncertain about your performance. You feel a pit in your stomach the whole way home, but take some comfort in knowing that you did your best.
+
+You go to bed that night wondering if you've let your inner child down. (colour:$links)[[[Can you really hope to achieve your goals?|Mocked by Peers]]] (stop:)(if:$anim is not true)[(set:$ani to 1)]]
+
+
+:: Job Interview {"position":"1850,600","size":"100,100"}
+Your thoughts are all over the place as you walk towards the building's entrance. For the second time today, events from ages ago have wormed their way into your mind. 
+
+Thinking back on your child and teenage selves, you suddenly feel a desire to make them proud of who they've become.
+
+As you walk through the door, flashes of the conversations you've had throughout the day flutter inside your head. {
+
+(if: $covertness is < 25)[
+
+(if: $fluency is 1)[The stress of all your failed interactions today is weighing on you. But a part of you is glad that you stood your ground and didn't let social pressure silence you.]
+
+(if: $fluency is 2)[The stress of all your failed interactions today is weighing on you. You feel conflicted about how much you stuttered, and wonder if you should have tried to be a little more fluent.]
+
+(if: $fluency is 3)[The stress of all your failed interactions today is weighing on you. A part of you regrets your attempts to speak more authentically, and wishes you'd just kept up appearances a little longer.]
+]
+
+(if: $covertness is >= 25 and $covertness is <= 75)[
+
+(if: $fluency is 1)[Today really was a mixed bag. You tried to take it in stride, but you ended up silencing yourself more than you'd like to.]
+
+(if: $fluency is 2)[Today really was a mixed bag. The ups and downs of navigating a semi-covert speaking style are nothing new to you, but sometimes this in-between position wears on you.]
+
+(if: $fluency is 3)[Today really was a mixed bag. You allowed yourself to stutter more than you normally do, and you're not sure how to feel about it.]
+
+]
+
+(if: $covertness is > 75)[
+
+(if: $fluency is 1)[You were remarkably fluent for most of the day. But is that really a good thing? You feel conflicted about having had to resort to avoidance and pretense in order to sound better.]
+
+(if: $fluency is 2)[You were remarkably fluent for most of the day. Your sense of relief is tainted by a nagging feeling that you censored yourself a little too often.]
+
+(if: $fluency is 3)[You were remarkably fluent for most of the day; you're doing a good job of keeping up the façade, for now. But someday, you will fail. You push those thoughts to the back of your mind.]
+
+]
+}
+
+You try to shake off all negativity as you approach the office. There's no time for introspection anymore.
+
+(colour:$links)[[[This is it.|Question 1]]]
+
+
+:: Leave Coffee Shop {"position":"1700,1000","size":"100,100"}
+(if:$cupname is 1)["(print:$name's 1st)... (print:$name's 1st)..."
+The barista is staring at you quizzically.
+
+"It's, um, (print:$name's 1st)-(print:$name's 1st)-(print:$name's 1st)-(print:$name's 1st)..."
+
+People are starting to line up behind you.
+
+"My name is (print:$name's 1st)-$name!"
+
+Phew...]{
+
+}(if:$cupname is 2)["J-Jamie."]{
+
+}(if:$cupname is 3)["(if: $name's 1st is "A")[Sam](else:)[Alex]."]
+
+Moments later, you pick up your cup (adorned with giant block letters spelling "{
+(if:$cupname is 3)[(if: $name's 1st is "A")[SAM](else:)[ALEX]]
+(if:$cupname is 1)[(uppercase:$name)]
+(if:$cupname is 2)[JAMIE]
+}") and head home.
+
+You spend the remainder of your time practicing and preparing for your interview, and make sure to leave extra early. (colour:$links)[[[On the way there, you find yourself drifting off into another memory...|Ask Question in Class]]]
+
+
+:: Leave Dry Cleaner {"position":"1700,800","size":"100,100"}
+{(if:$repeat is 1)["I h... I have a b-big job int-intervvview tonight!"]
+(if:$repeat is 2)["N... n-nah, these are just m-m-mmmy pyjamas!"]
+(if:$repeat is 3)["Y-y-yeah, y... you c-could sssay that."]
+(if:$repeat is 4)["Never mind."]}
+
+He thanks you energetically after handing you your clothes, but you feel some lingering awkwardness as you leave the building. <script>toDone("clean")</script> (set:$clean to true)
+
+On your way home, you decide to make a stop at a café. You're looking forward to picking up a nice drink to soothe your nerves!
+
+What do you plan on ordering?
+
+(colour:$fluent)[- Coffee.]<cof|
+(colour:$fluent)[- Tea.]<t|
+(colour:$fluent)[- Hot chocolate.]<choc|
+(colour:$fluent)[- A smoothie.]<smoo|
+
+(click: ?cof)[(set: $drink to "coffee")(go-to: "Order Drink")]
+(click: ?t)[(set: $drink to "tea")(go-to: "Order Drink")]
+(click: ?choc)[(set: $drink to "hot chocolate")(go-to: "Order Drink")]
+(click: ?smoo)[(set: $drink to "a smoothie")(go-to: "Order Drink")]
+
+
+:: Leave House {"position":"950,600","size":"100,100"}
+You get to the bus stop just a little early, and a few people are already waiting.
+
+As you wait for the bus, you think to yourself: []<thought|
+
+[|car>[(colour:$links)[- "I wish I had a car..."]]
+|bus>[(colour:$links)[- "I'm glad I get to skip the morning traffic!"]]
+|supper>[(colour:$links)[- "I wonder what to make for supper."]]]<choice|(click:?car)[(replace:?thought)["I wish I had a car..."](replace:?choice)[]](click:?bus)[(replace:?thought)["I'm glad I get to skip the morning traffic!"](replace:?choice)[]](click:?supper)[(replace:?thought)["I wonder what to make for supper."](replace:?choice)[]]{
+
+}(more:)[When the bus pulls up, you climb on and reach for your public transportation card.
+
+The driver, a stocky middle-aged woman, greets every passenger with a jolly "Good morning!" as they step in front of the card scanner. You know her well and she's often been kind to you in the past, even lingering for a few moments whenever she sees you run to catch the bus.
+
+When your turn comes, how do you greet her?
+
+{(either: "(colour: $dysfluent)[[- \"Good morning!\"]<2nd|(set: $2nd to 'Y')]",
+"(colour: $verydysfluent)[[- \"Good morning!\"]<2nd|(set: $2nd to 'R')]")
+(click: ?2nd)[(set: $cli to 2) (goto: "On the Bus")]}
+{(either: "(colour: $dysfluent)[[- \"Hi!\"]<1st|(set: $1st to 'Y')]",
+"(colour: $verydysfluent)[[- \"Hi!\"]<1st|(set: $1st to 'R')]")
+(click: ?1st)[(set: $cli to 1) (goto: "On the Bus")]}
+{[(colour:$links)[- (Stay silent.)]]<3rd|
+(click: ?3rd)[(set: $cli to 3) (goto: "On the Bus")]} ]
+
+
+:: Meal {"position":"1400,600","size":"100,100"}
+{(if:$joking is 1)[You pipe up with your own joke, and their amused looks turn to you.]
+(if:$joking is 2)[You pipe up with your own joke, and their amused looks turn to you.]
+(if:$joking is 3)[You pipe up with your own joke, and their amused looks turn to you.]
+}
+{(if:$joking is 1)["What is the most... the most surp- surp-... the most shocked s-soup?]
+(if:$joking is 2)["Why did the plant... why did the plant get a d-deg... a deg... a diploma?]
+(if:$joking is 3)["How did Pa... how did P-pavlov k-ke... get his h-hair so-sof... soft?]
+}
+{(if:$joking is 1)[It's g... it's, uh..."]
+(if:$joking is 2)[Because it w... w... uh..."]
+(if:$joking is 3)[He c-c... he... uh..."]
+}
+
+{(if:$joking is 1)[(upperfirst:$expletive), that totally ruined your joke! You're trying to twist the phrasing a bit, looking for a way to get past this horribly-timed block.]
+(if:$joking is 2)[(upperfirst:$expletive), that totally ruined your joke! You're trying to twist the phrasing a bit, looking for a way to get past this horribly-timed block.]
+(if:$joking is 3)[(upperfirst:$expletive), that totally ruined your joke! You're trying to twist the phrasing a bit, looking for a way to get past this horribly-timed block.]
+}{(if:$joking is 1)[But Jamie suddenly interjects.]
+(if:$joking is 2)[But Jamie suddenly interjects.]
+(if:$joking is 3)[But Jamie suddenly interjects.]
+}{(if:$joking is 1)["Oh, I've got one! So, three chess pieces walk into a pawn shop..."]
+(if:$joking is 2)["Oh, I've got one! So, three chess pieces walk into a pawn shop..."]
+(if:$joking is 3)["Oh, I've got one! So, three chess pieces walk into a pawn shop..."]
+}
+
+(colour:$links)[[[- That really sucks.|Dessert]]]
+(colour:$links)[[[- Maybe it's for the best...|Dessert]]]
+
+
+:: Meetup {"position":"1250,600","size":"100,100"}
+"$name!"
+
+You look around and quickly spot your friends enthusiastically waving at you from a large booth. You're seemingly the last to arrive.
+
+A chorus of "hey"s and "hi"s erupts as you take a seat. Noticing the presents already strewn about the table, you pull out your own and hand it to the birthday girl.
+
+(colour:$fluent)[[[- "Happy birthday, Clementine!"|Order Food]]]
+
+
+:: Mocked by Peers [f s] {"position":"1925,500","size":"100,100"}
+(if:$anim is not true)[(set: $typewriterText to "16 years old
+Your best friend's house"){
+(display: "Typewriter")}](else:)[//16 years old
+Your best friend's house//](if:$anim is not true)[(set:$ani to 1.25)]
+
+(live:$ani*3s)[Slumped into Jamie's parents' comfy couch, in a living room packed with friends and acquaintances, you're watching a popular comedy film you'd never seen before.(stop:)]
+
+(live:$ani*9.5s)["We got an attorney in the family."(stop:)]
+
+(live:$ani*11s)["Great, who?"(stop:)]
+
+(live:$ani*12.5s)["My cousin Vinny"!(stop:)]
+
+(live:$ani*14s)[An hour passes and you're all enjoying yourselves. The wrongly-accused protagonists are now in court, and being represented by a new defense attorney after firing the titular Vinny.(stop:)]
+
+(live:$ani*19.5s)[The new attorney stands to give his opening statement.(stop:)]
+
+(live:$ani*23s)["Ladies and gentlemen of the j-(stop:)](live:$ani*24.2s)[j-(stop:)](live:$ani*24.4s)[j...(stop:)] (live:$ani*26s)[j-(stop:)](live:$ani*26.2s)[j-(stop:)](live:$ani*26.4s)[j...(stop:)] (live:$ani*28s)[of-(stop:)](live:$ani*28.2s)[of-(stop:)](live:$ani*28.4s)[of-(stop:)](live:$ani*28.6s)[of(stop:)] (live:$ani*29s)[the j-(stop:)](live:$ani*29.4s)[j-(stop:)](live:$ani*29.6s)[j-(stop:)](live:$ani*29.8s)[j...(stop:)] (live:$ani*31s)[ahem...(stop:)] (live:$ani*33s)[jjjury!(stop:)] 
+(live:$ani*35s)[On-(stop:)](live:$ani*35.5s)[on...(stop:)] (live:$ani*36s)[on...(stop:)] (live:$ani*37s)[on..."(stop:)]
+
+(live:$ani*38s)[You instinctively tense and cringe as you hear his broken speech. 
+The pauses, the rhythms, the gestures to help him push words out. You know //exactly// how he feels!(stop:)]
+
+(live:$ani*45s)[You've never seen someone who talks like you on TV before, and you're transfixed for a moment.(stop:)]
+
+(live:$ani*50s)[As the initial shock begins to fade, your attention shifts away from the screen and you register your friends' reactions for the first time.(stop:)]
+
+(live:$ani*56s)[They're laughing hysterically.(stop:)]
+(live:$ani*59s)[It dawns on you.(stop:)] (live:$ani*61s)[To them, there isn't an ounce of drama in the scene – only humour!(stop:)]
+
+(live:$ani*66s)[You endure the rest of this painfully awkward moment, then enjoy the remainder of the movie.
+Afterwards, as conversations emerge about what you just watched, you try to come to terms with your conflicted feelings. 
+It's a good day for you, fluency-wise, which makes you feel emboldened.(stop:)]
+
+(live:$ani*75.5s)[You're not comfortable opening up too much around everyone present, but you test the waters by stating that you felt bad for the defense attorney.(stop:)]
+
+(live:$ani*81.5s)["Eh, he just let his nerves get the best of him."(stop:)]
+
+(live:$ani*84.5s)["I can understand stuttering when you're nervous, but he was, like, spazzing out!"(stop:)]
+
+(live:$ani*88.5s)["I mean, why would you become a lawyer if you can't speak?"(stop:)]
+
+(live:$ani*93s)[You change the subject and don't dare to bring it up again.(stop:)]
+
+(live:$ani*98s)[(colour:$links)[(t8n: "fade")[[[- On that day, I vowed to show the world that I can attain almost any career I want.|Response]]]]
+(colour:$links)[(t8n: "fade")[[[- On that day, I started telling myself that maybe I didn't belong in any position where I'd have to speak.|Response]]]] (stop:)(if:$anim is not true)[(set:$ani to 1)]]
+
+
+
+:: Morning [todont] {"position":"500,700","size":"100,100"}
+{(if: $liketalk is 1)[You love talking to people; ]
+
+(if: $liketalk is 2)[You really enjoy a good conversation with people you click with! ]
+
+(if: $liketalk is 3)[You don't often go out of your way to talk to people...]}{
+
+(if: $liketalk is 1)[unfortunately, you have a stutter, which often acts as an obstacle to communication.]
+
+(if: $liketalk is 2)[But having a good conversation can be difficult at times, because of your stutter.]
+
+(if: $liketalk is 3)[ and when you do, you're often plagued by your stutter, which tends to make matters worse.]}
+
+You don't understand the exact cause of your disorder (to your knowledge, science hasn't quite figured it out yet), but it's most likely something in your brain not working as it should. It's been gnawing away at your speech for most of your life, creating gaps and distortions in your sentences.
+
+The silver lining, as you see it, is that your condition isn't as severe as it could have been – you have bouts of fluency, allowing you to pass as a "normal" member of society most of the time. Even on bad days, the telltale signs of an incoming speech block can help you anticipate and avoid it, using the tricks and techniques you've learned over the years... but that doesn't always mean you'll get to say what you want or need to!
+
+Not every stutterer has the privilege of being able to hide it, but among those who do, some are more "overt" and others more "covert". What is your own approach to fluency?
+
+(colour:$links)[- I try to speak my mind as much as possible, even if it means getting completely stuck at times.]<option1|
+(colour:$links)[- I try my best to say what I want to, but blocks often cause me to change my plans.]<option2|
+(colour:$links)[- I try to hide my stutter at all costs. It's fluency or nothing!]<option3|
+
+(click: ?option1)[(set: $fluency to 1)(set: $covertness to 50) (goto: "To-do")]
+
+(click: ?option2)[(set: $fluency to 2)(set: $covertness to 50) (goto: "To-do")]
+
+(click: ?option3)[(set: $fluency to 3) (set: $covertness to 50) (goto: "To-do")]
+
+
+:: Name [n s] {"position":"350,700","size":"100,100"}
+(live:$ani* 1s)["$name", you want to say.(stop:)]
+(live:$ani* 4.5s)[ You open your mouth, but you already know it's in vain.(stop:)](live:$ani* 8s)[ Nothing comes out.(stop:)]
+(live:$ani* 10s)[ Your throat feels tight and your tongue won't obey you.(stop:)]
+
+(live:$ani* 14s)[Eric chuckles nervously.(stop:)]
+(live:$ani* 17s)["Did you forget your name?"(stop:)]
+
+(live:$ani* 20s)[You hear laughter. Everyone is looking at you now.(stop:)]
+
+(live:$ani* 23.5s)[The clock is ticking louder than ever, taunting you.(stop:)]
+
+(live:$ani* 27s)[Eric is tired of waiting. He turns to leave.(stop:)] (live:$ani* 30.5s)[(text-style: "blur")[Your coworkers start to sing.](stop:)]
+
+(if:$ani is 1)[(text-style: "blur")[(live:$ani*34s)[W](live:$ani*34.2s)[a](live:$ani*34.4s)[i](live:$ani*34.6s)[t](live:$ani*34.8s)[,](live:$ani*35.2s)[ t](live:$ani*35.4s)[h](live:$ani*35.6s)[a](live:$ani*35.8s)[t](live:$ani*36s)['](live:$ani*36.2s)[s](live:$ani*36.6s)[ n]](text-style: "blurrier")[(live:$ani*36.8s)[o](live:$ani*37s)[t](live:$ani*37.4s)[ r](live:$ani*37.6s)[i](live:$ani*37.8s)[g](live:$ani*38s)[h](live:$ani*38.2s)[t](live:$ani*38.4s)[.](live:$ani*38.6s)[.](live:$ani*38.8s)[.]](live:$ani*39.8s)[(goto: "Wake Up")]]{
+
+}(if: $ani is 0)[(text-style:"blur")[(colour:$links)[[[Wait, that's not right...|Wake Up]]] ] ]
+
+
+:: On the Bus {"position":"950,700","size":"100,100"}
+{(if: $cli is 1)[
+(if: $1st is "G")[You step up and scan your card. When the driver greets you, you reply with a friendly "Hello!" and head towards the back.] 
+(if: $1st is "Y")[You step up and scan your card. When the driver greets you, you reply with a friendly (if shaky) "H-h-hi!" and make your way towards the back.(set:$covertness to it -5)] 
+(if: $1st is "R")[You step up and scan your card. When the driver greets you, you smile and open your mouth, but your reply gets stuck in your throat. She's already looking away from you, and she can't hear the quiet sounds you're making as you try to push the word out. A few seconds later, as you're still struggling, she pulls on a lever to close the doors. The bus starts moving. You realize you're beginning to look foolish, still standing there trying to say hi, so you start walking towards the back.(set:$covertness to it -5)]
+]
+
+(if: $cli is 2)[
+(if: $2nd is "G")[You step up and scan your card. When the driver greets you, you reply with a friendly "Good morning!" and head towards the back.] 
+(if: $2nd is "Y")[You step up and scan your card. When the driver greets you, you reply with a friendly (if shaky) "G...good morn...nning!" and make your way towards the back.(set:$covertness to it -5)] 
+(if: $2nd is "R")[You step up and scan your card. When the driver greets you, you smile and open your mouth, but your reply gets stuck in your throat. She's already looking away from you, and she can't hear the quiet sounds you're making as you try to push the words out. A few seconds later, as you're still struggling, she pulls on a lever to close the doors. The bus starts moving. You realize you're beginning to look foolish, still standing there trying to say good morning, so you start walking towards the back.(set:$covertness to it -5)] 
+]
+
+(if: $cli is 3)[(set:$covertness to it + 5)
+Your fellow passengers offer the driver a few "good mornings"s and "hello"s as they scan their cards. When it's your turn to be greeted, you just give a small smile and head towards the back. 
+]}
+
+{(if: $cli is 1)[
+(if: $1st is "G")[You settle down into an empty seat(if: $clothes is "dress")[, careful to hold back the bottom of your dress so it gets pinned between your skin and the warm synthetic cushioning].] 
+(if: $1st is "Y")[You sit in an empty seat(if: $clothes is "dress")[, careful to hold back the bottom of your dress so it gets pinned between your skin and the warm synthetic cushioning].] 
+(if: $1st is "R")[You plop down into an empty seat(if: $clothes is "dress")[, holding back the bottom of your dress so it gets pinned between your skin and the warm synthetic cushioning].]
+]
+
+(if: $cli is 2)[
+(if: $2nd is "G")[You settle down into an empty seat(if: $clothes is "dress")[, careful to hold back the bottom of your dress so it gets pinned between your skin and the warm synthetic cushioning].] 
+(if: $2nd is "Y")[You sit in an empty seat(if: $clothes is "dress")[, careful to hold back the bottom of your dress so it gets pinned between your skin and the warm synthetic cushioning].] 
+(if: $2nd is "R")[You plop down into an empty seat(if: $clothes is "dress")[, holding back the bottom of your dress so it gets pinned between your skin and the warm synthetic cushioning].] 
+]
+
+(if: $cli is 3)[
+You plop down into an empty seat(if: $clothes is "dress")[, holding back the bottom of your dress so it gets pinned between your skin and the warm synthetic cushioning]. 
+<script>showAch("ach1")</script> 
+(replace: ?AchTxt1)[(css: "font-size: 20px")[(text-style:"underline")[  ''Shut up''  ]<br>
+Keep it to yourself.] ]{
+}(set:$AchShutUp to 1)]}
+
+During the bus ride, tonight's job interview trots back into your mind. You reflect on the fluency techniques you've had to teach yourself over the years, hoping they'll prove more helpful tonight than they were in that phone call. Paraphrases, filler words, rhythm and tone changes...
+
+(colour:$links)[[[You lose yourself in thought...|Speech Therapist]]]
+
+
+:: Open About {"position":"50,175","size":"100,100"}
+|opa>[(colour:black)[''▶ About'' (if you'd rather not go in blind)]]
+(click: ?opa)[(replace: ?about)[(display: "About")]]
+
+
+:: Open Achievements {"position":"550,175","size":"100,100"}
+	|opach>[(colour:black)[''▶ Achievement list'']]
+(click: ?opach)[(replace: ?achievements)[(display: "Achievements")]]
+
+
+:: Open Credits {"position":"175,175","size":"100,100"}
+|opt>[(colour:black)[''▶ Credits'']]
+(click: ?opt)[(replace: ?credits)[(display: "Credits")]]
+
+
+:: Open Extras {"position":"425,175","size":"100,100"}
+|ope>[(colour:black)[''▶ Extras'']]
+(click: ?ope)[(replace: ?extras)[(display: "Extras")]]
+
+
+:: Open Options {"position":"300,175","size":"100,100"}
+|opo>[(colour:black)[''▶ Options'' (accessibility, display and save data)]]
+(click: ?opo)[(replace: ?options)[(display: "Options")]]
+
+
+:: Options {"position":"300,50","size":"100,100"}
+{(display: "Close Options")
+}(colour:black)[|dalton>[(checkbox: 2bind $dalton, "Colourblind-friendly mode")]]{
+	(click-rerun: ?dalton)[ (go-to: "Title Screen Permanent")
+		(unless: $dalton)[<script>setA11y("dalton")</script>]
+		(else:)[<script>setA11y("")</script>]
+	]
+}
+(checkbox-fullscreen: "Fullscreen mode"){
+}
+(colour:black)[|reset>[(checkbox: 2bind $reset, "Reset all progess")]]{
+	(click-rerun: ?reset)[
+		(if:(confirm: "Delete your save file and start over?"))[
+			(set: $reset to false)
+			<script>deleteSaveSlot("Slot A");</script>
+			(reload:)
+		]
+		(else:)[(set: $reset to false)]
+	]
+}
+
+
+:: Order Drink {"position":"1700,900","size":"100,100"}
+Your heart set on $drink, you set foot inside the busy coffee shop. After a short wait in the queue, you approach the barista.
+
+"Hello! What can I get you?"
+
+You quickly and smoothly place your order. "(upperfirst:$drink), please!"
+
+"Thank you! You can pick it up over there when it's ready.
+What's your name?"
+
+This again?!
+
+(colour:$verydysfluent)[- (Use your name.)]<1|
+(if: $name is not "Jamie")[(colour:$dysfluent)[- (Use a friend's name.)]<2|<br>](colour:$fluent)[- (Use a fake name.)]<3|
+
+(click: ?1)[(set: $cupname to 1) (set:$covertness to it - 10) (set:$anxiety to it +10) (goto: "Leave Coffee Shop")]
+
+(click: ?2)[(set: $cupname to 2) (goto: "Leave Coffee Shop")]
+
+(click: ?3)[(set: $cupname to 3) (set:$covertness to it + 10) (goto: "Leave Coffee Shop")]
+
+
+:: Order Food {"position":"1250,700","size":"100,100"}
+"Happy birthday, Clementine!"
+
+She beams with happiness and thanks you effusively. "I can't wait to try it with you guys!" <script>toDone("lunch")</script> (Set:$lunch to true)
+
+The waitress wastes no time taking orders, and before you know it she's already almost up to your seat.
+
+"So, what'll it be for you?"
+
+Feeling a familiar tension swirling in your throat, you turn to face her, open your mouth, and...
+(upperfirst: $expletive). 
+[]<space|
+(colour:$verydysfluent)[- "(upperfirst: $bestfood)"]<best|
+(colour:$fluent)[- "(upperfirst: $worstfood)"]<worst|
+(colour:$dysfluent)[- "Same as her."]<sally|
+(colour:$links)[- (Point out (lowercase:$bestfood) on a menu.)]<menu|
+
+(click:?menu)[(replace:?menu)[](replace:?space)[
+You look around frantically, hoping you can point to the item on a menu. But they've all been collected already!
+]]
+
+(click:?best)[(set:$foodchoice to 1)(set:$covertness to it - 15)(set:$AchSatisfied to 1)(set:$anxiety to it + 10)(go-to:"Telling Joke")]
+
+(click:?worst)[(set:$foodchoice to 2)(set:$covertness to it + 15)(set:$AchQueasy to 1)(go-to:"Telling Joke")]
+
+(click:?sally)[(set:$foodchoice to 3)(set:$AchSally to 1)(go-to:"Telling Joke")]
+
+
+:: Phone Call End {"position":"800,700","size":"100,100"}
+As the taunting dial tone keeps ringing in your ear, you let slip (colour:$links)[your expletive of choice]<expletive|...{
+
+<script>toDone("call")</script> (set:$call to true)
+<script>showAch("ach1")</script> 
+}(replace: ?AchTxt1)[(css: "font-size: 20px")[(text-style:"underline")[  ''Hold the line''  ]
+Get hung up on.] ]{
+}(set:$AchPhone to 1) (set: $expletive to "")
+
+[]<useexpletive|
+
+(more:)[Reflexively dialing back, you get no answer; they're probably busy dealing with customers.
+
+You may as well just head straight to the store. With any luck, they'll still have some copies in stock!
+
+Ready to face the world, (colour:$links)[[[you head out to the nearest bus stop.|Leave House]]]
+{
+(if: (uppercase: $expletive) contains "XYZZY")[<script>showAch("ach2")</script> 
+(replace: ?AchTxt2)[(css: "font-size: 18px")[(text-style:"underline")[''The magic word'']<br>
+Utter the magic word.] ] (set:$AchMagic to 1)]
+
+(if: (uppercase: $expletive) contains "THANK" or (uppercase: $expletive) contains "PLEASE" or (uppercase: $expletive) contains "SORRY")[<script>showAch("ach2")</script> 
+(replace: ?AchTxt2)[(css: "font-size: 18px")[(text-style:"underline")[''The OTHER magic word'']<br>
+Be exceedingly polite.] ] (set:$AchOtherMagic to 1)]
+
+}]
+
+{(click: ?expletive)[(set: _default to "dangit") (for: each _i, ...(range:1,6))[(if: (trimmed: $expletive) is "")[(set: $expletive to (trimmed:(prompt: "What's your favourite expletive?", _default, "", "Confirm")))
+(if: _i > 4)[(set: _default to "gadzooks")] ] ]
+
+(if: (trimmed: $expletive) is "")[(set:$expletive to "gadzooks")](replace: ?useexpletive)[(upperfirst: $expletive)!]
+
+(replace:?expletive)[(colour:black)[your expletive of choice] ] ]}
+
+
+:: Phone Call Start {"position":"800,600","size":"100,100"}
+You steel yourself for a moment, then dial the store's number.
+
+(live:$ani* 3s)[Ring... (stop:)] (live:$ani* 4s)[ring...(stop:)] (live:$ani*5s)[ring...(stop:)]
+
+(live:$ani*7s)[You can already feel your stutter coming on - a horrible diffuse tension that's impossible to unwind, making its way everywhere between your palate and your chest.(stop:)
+
+A deep, friendly voice greets you.]
+
+(live:$ani*16s)["Hi, this is the Game Tower, how can I help you?"(stop:)]
+
+[(live:$ani*20s)[(t8n: "fade")[[(colour:$fluent)[- "Hey! I'm calling to reserve a game."]<1st|](stop:)] ] ]<1st|
+
+(click: ?1st)[[(replace: ?1st)[(live:$ani*1s)[(colour: black)["Hey! I'm calling to reserve a game."(stop:)] ] ](live:$ani* 5s)[So far, so good! The tightness is lurking in the back of your throat, but (colour:$fluent)[it hasn't spiked up to block you from speaking, this time.](stop:)]
+
+(live:$ani* 10s)["Sure! What game are you looking for?"(stop:)]
+
+(live:$ani*13s)[You pull up the note you made for yourself.(stop:)] ] 
+
+(live:$ani*17s)[(t8n:"fade")[(colour: $dysfluent)[- "It's called 'Tricky Troubling Trivia'."] ] (stop:)]<2nd|(click: ?2nd)[(replace:?2nd)[(live:$ani*1s)["It's, uh..."(stop:)] ] 
+
+(live:$ani*3s)[Ugh. Here we go.(stop:)]
+
+(live:$ani*6s)["It's called...(stop:)] (live:$ani*7s)[T-(stop:)](live:$ani*7.2s)[tri-(stop:)](live:$ani*7.5s)[tricky...(stop:)] (live:$ani*8s)[Tr-(stop:)](live:$ani*8.1s)[t(stop:)](live:$ani*8.2s)[r(stop:)](live:$ani*8.3s)[r(stop:)](live:$ani*8.4s)[roubling(stop:)] (live:$ani*9s)[Tri-(stop:)](live:$ani*9.3s)[trivia."(stop:)]
+
+(live:$ani*11s)[(colour:$dysfluent)[An unpleasant block, but it was still manageable.] That could have been worse!(stop:)]
+
+(live:$ani*14s)["Yes, we have a few! I can set one aside for you if you want?"(stop:)]
+
+(live:$ani*19s)["Yes, please!"(stop:)]
+
+(live:$ani*21s)["Perfect! I'll just need to write down your name, and you can ask for the game when you come in."(stop:)]
+
+(live:$ani*27s)[Oh no.(stop:)]
+
+(live:$ani*29s)[Your name always seems to give you trouble – maybe because, unlike most other words, there's just no way to replace or circumvent it if you block.(stop:)]
+
+(live:$ani*37s)[You take a breath and repeat "(print: $name)" in your head over and over, trying to soothe your tense jaw.(stop:)]
+
+(live:$ani*42s)[You can faintly hear ambient noises at the end of the line as the clerk waits for your answer.(stop:)]
+
+(live:$ani*50s)[(t8n:"fade")[[(colour: $verydysfluent)[- "It's $name."] ] ] (stop:)]<3rd| (click: ?3rd)[(replace:?3rd)[(live:$ani*1s)["It's (print: $name's 1st)...(stop:)] (live:$ani*3s)[...(stop:)] (live:$ani*5s)[..."(stop:)] ]
+
+(live:$ani*8s)["Sorry?"(stop:)]
+
+(live:$ani*10s)[(colour:$verydysfluent)[The sound is completely stuck!](stop:)]
+
+(live:$ani*13s)[You try again with a different sentence.(stop:)]
+
+(live:$ani*16s)["My name is (print: $name's 1st)...(stop:)] (live:$ani*19s)[(print: $name's 1st)..."(stop:)]
+
+(live:$ani*21s)[You keep trying to push through, but it's not helping.(stop:)]
+
+(live:$ani*25s)["Sorry, I think it's cutting out?"(stop:)]
+
+(live:$ani*28s)[Using another trick you've learned, you count down from 3 before making another attempt, hoping to work up enough momentum to get through the block once and for all.(stop:)]
+
+(live:$ani*38s)[3...(stop:)]
+
+(live:$ani*40s)[2...(stop:)]
+
+(live:$ani*41s)["Hello?"(stop:)]
+
+(live:$ani*42s)[1...(stop:)]
+
+(live:$ani*44s)[You open your mouth again-(stop:)]
+
+(live:$ani*45s)[*click*(stop:)]
+
+(live:$ani*47s)[Beep...(stop:)] (live:$ani*48.5s)[beep...(stop:)] (live:$ani*50s)[beep...(stop:)]
+
+(live:$ani*54s)[(colour:$links)[[[He hung up.|Phone Call End]](stop:)]]
+]
+]
+]
+
+
+:: Question 1 {"position":"1850,700","size":"100,100"}
+{
+(if:$anim is not true)[(set:$ani to 1.25)]
+}(live:$ani*1)[The interview is conducted by a man who somehow seems equal parts approachable and severe.(stop:)] (live:$ani*4s)[You shake his hand, sit down, and ready yourself for what's to come.(stop:)]
+
+(if:$covertness is > 50)[(live:$ani*7s)[If you were more comfortable with your stutter, maybe you'd consider disclosing it before getting to the questions, in case you block during the interview.(stop:)] (live:$ani*11s)[But you don't feel prepared to do that at all right now!(stop:)]
+
+(live:$ani*14s)[You hope it won't be an issue.(stop:)]]{
+
+}(if:$covertness <= 50)[(live:$ani*7s)[You know you're probably going to stutter anyway, and you've been making an effort to be more open about it lately.(stop:)] (live:$ani*11s)[You decide to disclose your condition before he starts asking his questions.(stop:)]
+
+(live:$ani*14s)[His reaction is polite but difficult to read, and you hope you made the right choice.(stop:)]]
+
+(live:$ani*17s)[Suddenly, you're launched into the interview proper.(stop:)]
+(live:$ani*19s)[He first asks you about your skills.(stop:)]
+
+(live:$ani*20s)[You feel that you're *capable* of speaking fluently, right now...(stop:)] (live:$ani*22s)[but unfortunately, not with the specific sentences you had in mind, which are full of the most important information you want to convey!(stop:)]
+
+(live:$ani*27s)[(colour:$dysfluent)[(t8n: "fade")[- (Focus on giving the best possible answer.)]]<best|
+(colour:$fluent)[(t8n: "fade")[- (Focus on being fluent.)]]<easiest|
+(stop:)(if:$anim is not true)[(set:$ani to 1)]]
+
+(click:?best)[(set:$Q1 to 1)(set: $covertness to it -10)(go-to:"Question 2")]
+(click:?easiest)[(set:$Q1 to 2)(set: $covertness to it +10)(go-to:"Question 2")]
+
+
+:: Question 2 {"position":"1850,800","size":"100,100"}
+{
+(if:$anim is not true)[(set:$ani to 1.25)]
+}(if:$Q1 is 1)[(live:$ani*0.1s)[You stumble(stop:)] (live:$ani*1.5s)[and sputter(stop:)] (live:$ani*3s)[your way through your explanation.(stop:)] (live:$ani*6s)[However, you manage to capture all of your most interesting abilities.(stop:)]]{
+
+}(if:$Q1 is 2)[(live:$ani*1s)[You fluently talk about your skills, managing to avoid every potential block. In doing so, you also manage to avoid any mention of your most interesting abilities.(stop:)]]
+
+(live:$ani*9s)[Without skipping a beat, he asks you about your goals.(stop:)]
+
+(live:$ani*12.5s)[Maybe it's all the tension building up, or maybe it's just a stroke of bad luck, but you find that all your carefully crafted and eloquent sentences have abandoned you despite many rounds of perfectly-fluent practice at home.(stop:)]
+
+(live:$ani*21s)[(colour:$verydysfluent)[(t8n: "fade")[- (Focus on giving the best possible answer.)]]<best|
+(colour:$fluent)[(t8n: "fade")[- (Focus on being fluent.)]]<easiest|
+(stop:)(if:$anim is not true)[(set:$ani to 1)]]
+(click:?best)[(set:$Q2 to 1)(set: $covertness to it - 10)(go-to:"Question 3")]
+(click:?easiest)[(set:$Q2 to 2)(set: $covertness to it + 10)(go-to:"Question 3")]
+
+
+:: Question 3 {"position":"1850,900","size":"100,100"}
+{
+(if:$anim is not true)[(set:$ani to 1.25)]
+}(if:$Q2 is 1)[(live:$ani*1s)[You hit(stop:)] (live:$ani*2.5s)[several(stop:)] (live:$ani*4s)[PAINFUL(stop:)] (live:$ani*5.5s)[blocks(stop:)](live:$ani*7s)[, but eventually manage to outline the goals which are most aligned with the company's.(stop:)]]{
+
+}(if:$Q2 is 2)[(live:$ani*1s)[You manage to fluently explain your goals. But your descriptions meander, your circumlocutions aren't particularly clear or accurate, and you realize that you weren't able to bring up your most relevant objective.(stop:)]]
+
+(live:$ani*10s)[As the interview draws to a close, he asks you about your past experiences in the workplace.(stop:)]
+
+(live:$ani*13s)[Aha!(stop:)] (live:$ani*14s)[You figured this question was coming and prepared for it well – this is your time to shine!(stop:)] 
+
+(live:$ani*18s)[You take a second to put your thoughts in order.(stop:)] 
+
+(live:$ani*20s)[As you focus on the beginning of your first sentence, you feel your throat constrict harder than ever.(stop:)] (live:$ani*24s)[(uppercase: $expletive)!(stop:)]
+
+(live:$ani*25s)[You're not going to make it.(stop:)] 
+
+(live:$ani*27s)[Maybe you can still try to be fluent.(stop:)] (live:$ani*29s)[Maybe it'll be okay?(stop:)]
+
+(live:$ani*30.5s)[(colour:$verydysfluent)[(t8n: "fade")[- (Focus on giving the best possible answer.)]]<best|
+(colour:$verydysfluent)[(t8n: "fade")[- (Focus on being fluent.)]]<easiest|
+(stop:)(if:$anim is not true)[(set:$ani to 1)]]
+(click:?best)[(set:$Q3 to 1)(set: $covertness to it -10)(go-to:"Interview End 1")]
+(click:?easiest)[(set:$Q3 to 2)(set: $covertness to it +10)(go-to:"Interview End 2")]
+
+
+:: Response [todont] {"position":"2000,600","size":"100,100"}
+(if:$anim is not true)[(set: $typewriterText to "A few weeks after the interview..."){
+(display: "Typewriter")}](else:)[//A few weeks after the interview...//]
+
+(live:$ani*2s)[(t8n:"fade")[It's official: you didn't get the job.
+Questions start swirling around in your mind. (stop:)
+
+(if:$covertness is > 50)[Maybe you should have disclosed your stutter before the interview, so that it didn't seem so weird and out of place?]{
+
+}(if:$covertness <= 50)[Maybe disclosing your stutter was a mistake, and only made you look worse in the interviewer's eyes?]
+
+It's impossible to know, and that doubt will be bothering you for a while.
+
+You message your friends to let them know what happened.
+You're looking out of your window at the bright afternoon sun when you hear the ping of an incoming message. It's Clementine.
+
+"Hey," it reads. "I'm sorry to hear about your interview 😢
+I'm dealing with some difficult stuff too right now... wanna hang out tonight and talk about it?"
+
+(colour:$links)[[[You could really use a friend right now.|Clementine]] ] ]]
+
+
+:: Shopping {"position":"1100,600","size":"100,100"}
+You snap out of your thoughts as the bus approaches the mall that houses the game store. You find your way to the shop and are greeted by shelves full of colourful board games.
+
+As you walk up to the counter, you think back on your phone conversation and feel a rush of [...]<feel|[
+|emb>[(colour:$links)[- embarrassment.]]
+|ash>[(colour:$links)[- shame.]]
+[(colour:$links)[- anger.]]<ang|
+]<choice| (click:?emb)[(replace:?choice)[](replace:?feel)[ embarrassment.]] (click:?ash)[(replace:?choice)[](replace:?feel)[ shame.]] (click:?ang)[(replace:?choice)[](replace:?feel)[ anger.]]
+(more:)[The employee at the register welcomes you with a smile, and you initiate the conversation:
+
+"Hi, do you still have, um, Tricky Troubling Trivia?"
+
+(Phew!)
+
+"Hmm, I think we already sold out, actually..."
+
+(upperfirst: $expletive)!
+
+You let her know you tried to call earlier to reserve a copy.
+
+Her colleague walks over as she looks through the pile of reserved games.
+
+"Oh, were you the one who called about Tricky Troubling Trivia? I put it aside for you!"
+
+She pulls the game out right as he finishes his sentence. You thank the both of them, relieved to have secured the last copy after all!
+
+He chuckles lightly. "I wasn't sure if you'd come, the call died right at the worst time! I'm glad it all worked out."
+
+[(colour:$fluent)[- (Play along and pretend your signal was bad.)]<pretend|
+(colour:$fluent)[- (Let him know what really happened.)]<truth|]<choice|
+
+(more:)[When you turn towards the exit, you feel... <script>toDone("store")</script> (set:$store to true)
+
+[(colour:$links)[- relieved.]]<rel|
+[(colour:$links)[- disappointed.]]<dis|
+[(colour:$links)[- conflicted.]]<conf|]
+
+(click:?rel)[(set: $anxiety to it - 20)(go-to: "Exit Store")]
+(click:?dis)[(set: $anxiety to it + 10)(go-to: "Exit Store")]
+(click:?conf)[(set: $anxiety to it + 20)(go-to: "Exit Store")]
+
+(click:?pretend)[(set: $covertness to it + 15)(replace:?choice)[You laugh along and curse your "terrible signal" as you make your purchase.]]
+(click:?truth)[(set: $covertness to it - 15)(replace:?choice)[You explain that you have a stutter. He gives you a surprised look and sheepishly apologizes as you finish paying.]]
+]
+
+
+
+:: Speech Therapist [f s] {"position":"1025,500","size":"100,100"}
+(if:$anim is not true)[(set: $typewriterText to "8 years old
+Therapist's office"){
+(display: "Typewriter")}](else:)[//8 years old
+Therapist's office//](if:$anim is not true)[(set:$ani to 1.25)]
+
+(live:$ani* 3s)[You're seeing a therapist for the first time. (stop:)](live:$ani* 5s)[At his request, you tell him about your day. (stop:)](live:$ani* 8s)[He doesn't listen, but he hears your every block and stumble. (stop:)]
+(live:$ani* 12s)[He looks up at your parents.(stop:)]
+
+(live:$ani* 15s)["I think your child might have some issues with confidence. (stop:)](live:$ani* 18.5s)[I hear a lot of anxiety - that's probably causing the stutter." (stop:)](live:$ani* 21s)[He turns to you. (stop:)](live:$ani* 23s)["Try to finish thinking about what you want to say before you start talking. That might make things easier!" (stop:)]
+
+(live:$ani* 28s)[You pipe up: "(stop:)](live:$ani* 29.5s)[(text-style: "rumble")[B-](stop:)](live:$ani* 30.25s)[(text-style: "rumble")[b-](stop:)](live:$ani* 31s)[(text-style: "rumble")[b-](stop:)](live:$ani* 31.75s)[(text-style: "rumble")[b-](stop:)](live:$ani* 32.5s)[(text-style: "rumble")[b-](stop:)](live:$ani* 33.25s)[(text-style: "rumble")[b-](stop:)](live:$ani* 34s)[(text-style: "rumble")[but](stop:)] (live:$ani* 36s)[(text-style: "shudder")[I...](stop:)] (live:$ani* 38s)[(text-style: "shudder")[I...](stop:)] (live:$ani* 40s)[(text-style: "shudder")[...](stop:)] (live:$ani* 40s)["(stop:)]
+
+(live:$ani* 42s)[He smiles.(stop:)] (live:$ani* 43s)["Try to relax.(stop:)] (live:$ani* 44s)[Slow down.(stop:)] (live:$ani* 45.5s)[Take a deep breath."(stop:)]
+
+(live:$ani* 47s)[You take a deep breath.(stop:)] (live:$ani* 49s)[It doesn't help.(stop:)]
+(live:$ani* 50.5s)[You want to tell him that you already know what you want to say.(stop:)] (live:$ani* 53.5s)[But the session is over.(stop:)] (live:$ani* 55s)[Your parents take you outside.(stop:)] 
+(live:$ani* 57s)[You ask them whether it's your fault that you stutter.(stop:)] (live:$ani* 60s)[They don't say yes,(stop:)] (live:$ani* 62s)[but they don't say no either...(stop:)]
+ 
+(live:$ani*65s)[(t8n: "fade")[You think to yourself:]
+
+(colour:$links)[(t8n: "fade")[[[- It must be my fault.|Shopping]]]]
+(colour:$links)[(t8n: "fade")[[[- There must be something wrong with me.|Shopping]]]]
+(colour:$links)[(t8n: "fade")[[[- They probably wish they had a normal kid.|Shopping]]]] (stop:)(if:$anim is not true)[(set:$ani to 1)]]
+
+
+
+:: Stutter End [todont] {"position":"2150,900","size":"100,100"}
+{
+(if:$anim is not true)[(set:$ani to 1.25)]
+}(live:$ani*1s)[She listens without interjecting as you get these years-old frustrations and sorrows off of your chest.(stop:)]
+
+(live:$ani*6s)[Careful not to monologue for too long, you wrap up your response and top it off with a sigh of relief.(stop:)]
+(live:$ani*12.5s)["It's...(stop:)](live:$ani*13.5s)[ it's so nice to be ab-(stop:)](live:$ani*15.5s)[able to talk about this with someone.(stop:)](live:$ani*19s)[ (text-style:"shudder")[I...]"(stop:)]
+
+(live:$ani*20s)[Another major block.(stop:)]
+
+(live:$ani*23s)["(text-style:"shudder")[(text-style:"shudder")[I-]](stop:)](live:$ani*24s)[ (text-style:"shudder")[(text-style:"rumble")[I...]]"(stop:)]
+
+(live:$ani*26s)[Her lips are still lightly curled in a patient smile.(stop:)]
+
+(live:$ani*29s)["(text-style:"rumble")[(text-style:"shudder")[(text-style:"shudder")[I...]]]"(stop:)]
+
+(live:$ani*31s)[A moment passes.(stop:)]
+
+(live:$ani*34s)["(if:$resolution is 1)[I... just wish I could be n-n-normal, you know?]{
+}(if:$resolution is 2)[I... just wish I could feel a-a-accepted, you know?]{
+}(if:$resolution is 3)[I... just wish people could take me s-s-seriously, you know?]{
+}"(stop:)]
+
+(live:$ani*39s)[As you resume your back-and-forth, you're tripped up by blocks left and right; (stop:)](live:$ani*42s)[ but for once, you don't care at all.(stop:)] (live:$ani*44s)[You're not ashamed, embarrassed, or stressed.(stop:)](live:$ani*46s)[ You can take as long as you need.(stop:)]
+
+(live:$ani*49s)[(t8n: "fade")[You end the night feeling grateful to have such a good friend –(stop:)]] (live:$ani*52s)[(t8n: "fade")[and thinking to yourself that maybe (if:$resolution is 1)[feeling normal](if:$resolution is 2)[being accepted](if:$resolution is 3)[being taken seriously]](stop:)] (live:$ani*55s)[(t8n: "fade")[(colour:$links)[[[isn't such an impossible dream after all...|Epilogue]]](stop:)(if:$anim is not true)[(set:$ani to 1)]]]
+<br>
+<br>
+<br>
+(set:$bird to true)
+
+
+:: Stutter Talk [todont] {"position":"2150,800","size":"100,100"}
+You smile back. "I'm... I'm glad I could h-h-help!"
+
+She looks pensive for a moment.
+
+"Hey, I hope that's not a rude thing to ask, but... what's it like to stutter? How does it feel?"
+
+You're taken aback by the question. You realize that no one has ever asked you how it felt.
+
+You tell her about the physiological symptoms, how your tongue seizes and your diaphragm constricts. 
+You tell her how tiring it can be to have to actively think about something that most people do effortlessly. 
+She seems stunned as you name a few of the opportunities you've missed due to being unable or unwilling to talk.
+
+Most of all, you want her to know that:
+
+(colour:$links)[(t8n: "fade")[- You just want to be normal.]]<normal|
+(colour:$links)[(t8n: "fade")[- You just want to be accepted.]]<accept|
+(colour:$links)[(t8n: "fade")[- You just want to be taken seriously.]]<serious|
+
+{(click:?normal)[(set:$resolution to 1)(go-to:"Stutter End")]
+(click:?accept)[(set:$resolution to 2)(go-to:"Stutter End")]
+(click:?serious)[(set:$resolution to 3)(go-to:"Stutter End")]}
+
+
+:: Telling Joke {"position":"1250,800","size":"100,100"}
+{(if: $foodchoice is 1)["I'd, um... I'd li-like the (lowercase: $bestfood's 1st)... (lowercase:$bestfood's 1st)-(lowercase:$bestfood's 1st)..."]
+
+(if: $foodchoice is 2)["I'll have the $worstfood, please."]
+
+(if: $foodchoice is 3)[You point to Clementine, who's deep in conversation with your friend Jamie. "I- I'll have t-the same thing as, uh... as-as her."]}
+
+{(if: $foodchoice is 1)[You struggle for what feels like an eternity under the weight of the waitress's gaze. Finally, you manage to make her understand what you want, and she leaves.]
+
+(if: $foodchoice is 2)[Your relief at being able to smoothly place your order is quickly drowned out by regret. What have you done??]
+
+(if: $foodchoice is 3)[As the waitress leaves, you wait for an opportunity to ask Clementine what she ordered (thankfully, it was (if:$worstfood contains "taco")[salad](else:)[tacos] and not $worstfood)!
+]}
+
+You try to distract yourself from your (if:$foodchoice is 1 or 3)[hunger](if:$foodchoice is 2)[dread] by tuning into the discussion that started up as you were ordering. Everyone is sharing some of their best jokes and laughing along.
+
+Now's your chance to share one of your own! What do you contribute?
+
+(colour:$verydysfluent)[- "What is the most surprised soup? Gasp-acho!"]<1|
+(colour:$verydysfluent)[- "Why did the plant get a degree? It wanted a career in STEM fields!"]<2|
+(colour:$verydysfluent)[- "How did Pavlov keep his hair soft? He conditioned it!"]<3|
+(colour:$links)[- (Stay silent.)]<silence|
+
+(click:?1)[(set:$joking to 1)(set:$covertness to it - 5)(go-to: "Meal")]
+(click:?2)[(set:$joking to 2)(set:$covertness to it - 5)(go-to: "Meal")]
+(click:?3)[(set:$joking to 3)(set:$covertness to it - 5)(go-to: "Meal")]
+(click:?silence)[(set:$joking to 4)(set:$covertness to it + 5)(go-to: "Dessert")]
+
+
+
+:: Title Screen 1st [s h] {"position":"200,800","size":"100,100"}
+{(if: $dalton is true)[(set: $anititle to 0)](else:)[(set:$anititle to 1)]
+(if: $permanent is true)[(set:$anititle to 0)]
+(set: $fluent to "#00c400")
+(set: $dysfluent to "#dbd400")
+(set: $verydysfluent to "red")
+(set: $links to "#4169E1")
+<center>(css: "font-size: 60px")[Dysfluent]
+(live:$anititle* 1.5s)[(t8n:"pulse")[<img alt="Embedded Image" src="data:image/png;base64,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
+" />](stop:)]
+(live:$anititle* 2.5s)[(t8n:"pulse")[<img alt="Embedded Image" src="data:image/png;base64,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
+" />](stop:)]
+(live:$anititle* 3.5s)[(t8n:"pulse")[<img alt="Embedded Image" src="data:image/png;base64,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
+" />](stop:)]</center>}
+
+
+(live:$anititle* 4.5s)[(t8n:"fade")[(css: "font-size: 35px")[(colour:black)[[[**Start**|Dream]]]]](stop:)]
+
+
+(live:$anititle* 5.5s)[(t8n:"fade")[|About>[(display: "Open About")]](stop:)]
+
+(live:$anititle* 6.5s)[(t8n:"fade")[|Options>[(display: "Open Options")]](stop:)]
+
+(live:$anititle* 7.5s)[(t8n:"fade")[|Credits>[(display: "Open Credits")]](stop:)]
+
+(live:$anititle* 8.5s)[(t8n:"fade")[|Extras>[(display: "Open Extras")]](stop:)]
+
+(set: $complete to false)
+
+
+:: Title Screen Permanent [s h] {"position":"200,600","size":"100,100"}
+{(if: $dalton is true)[(set: $fluent to "#1E88E5")
+(set: $dysfluent to "#FFC107")
+(set: $verydysfluent to "#D81B60")
+(set: $links to "gray")]
+(if: $dalton is false)[(set: $fluent to "#00c400")
+(set: $dysfluent to "#dbd400")
+(set: $verydysfluent to "red")
+(set: $links to "#4169E1")]
+(set: $permanent to true)
+<center>(css: "font-size: 60px")[Dysfluent](if:$dalton is false)[
+<img alt="Embedded Image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAA7CAYAAADFJfKzAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAMtklEQVRoge2afVDTd57HX4Qg4TlokIABgsUzKAoOnEd8xFar7Grt3uqNzOpsbe9cu5VZHOvsOt1d7Tmd2rO76uC1dmvHOuriA91tT7ri6e6CWvAh1MAiokQMECWYQKJEICEk90eaaCRRebrdP3jNMEN+v8/38/u8f9/nz+8Lo4wyyiijjDLKKMNAwEg5bmhokKlUKllVVZVMo9HItFqtzGw2J2q1Whkg++7ZOrlcrhOLxTq5XK5LSUlpzszM1GVlZVVPmjSpa6RiGxbOnDmTuX79+nVyufwTwDmUP5lcplq7fu0npWdKJw5XfEOuWYPBkLl3797Mzz77LFOn061zXw8Rh5CQM4GI9DAi08IJk4cSLBlDuDzMq7xF20Wv0cZDbTem2vuYqs3cLdNjNds8NlKZtOqNN96oKthQ8EFMTEzjYGMdtFiTyTT/vffeyyncW7jN2mMFQJwSReKqCSQsj0eSNXawrgEwqjpo+eoOt4+20KmxABAsCiZ/Q375O++881Z0dPS1gfoclNiPP/5Y+ctf/bKi3dgOwORXJ5H4VjzxC2MH4+6Z3D3bRtN/3+HmlxoAxknGsX379lk/ffOnlQPxMyCxra2t81flrcopLyvfBjB5ziTSC6cQkhE8EDeDIpBAetV9nM+/hPZCEwDzc+aXHyk68pYsTvZctfzcYs+dP6dcuXJlRZu+jShJFK8Ufo+gVdBH3yDDHzxNR3Wo8muwGC3ESmM5eqJo1oK5Lz6zlp9L7PETx5Vr1qypsPZYSV84nZeK5tIhMeLEOfTIB0moMYzLedVUnf2WYFEwBw8dnLVq5aqnCn6m2OMnjivz8vIq+ux9LNywgNRdKTwQ3h++qAdJAAFE28fy7ca/Ub73AgKhgP1F+2e9vvJ1v4KfKrayslKZsyCnwtpjZdEvXiT5/QlYsQ5/5EOkaksNtTvqEYoCOfPXM7MWKH03ab9iW1tbp2bMyKht07cxZ4OSyYXJ2LGPXMRD5FL+t9Tv1RAjjaH6avXU+Lj4uidtAv0Vrr1W+2a1unpB6hIF0w8qcAj+/weigRD/ciztV0zo1W3UXqs13NLcKn/SRuCrYFFRkfJ06el3Q8UhZHyailPo8PkAh93BjX0atMUtwxz6wBEIBSg/zWSMOIjTpae3/b7o98onbfo14+7u7kxFqkLVpG3ixU/nkfDvUr8PKM+rRHvUJXT+CSXyFQnDGf+guLm/kcr/UJEoT6T+ev0LoSGhnuVlv5otLi7ObNI2IU2LZcJr4/061ZfdQ3u0hQCh633VvHd9JGIfMCmvyRmfJqFZ20xxcfHCx+/1E7t7z+51AJM3TUQg9NnKAfjbB/UAzNieRpA4CJPajEX7cHgjHwQCoYCZm7IA2LNnT6bXvcd/NDQ0LK9SVWWGikNIWBXv1+H9+gfcLdUjDBei2JCCNCcGcC3eh4seoxVT7eDmc8kqMeHiMKpUVetuNtz09EMvsSUlJR8CJC1NJFDkd6Cm8YhrbZq0QkZQeBAx/zIOAOOl4RFruNjOF8lf8z/TTqPeVjvg8k6Rg2lL0wA4WXIyw33dS+ylS65oxbMjnurs1mGX2Ik/SgIgShEJQIfaNODAnsRhd3B+zSXsFtecXv1u3aD8TpydDMA331xIcV/zEltfX98BIMmO9uuk7YKBh9ouQmUhni1dlML1cky1DwYc1JPcPtpMp8ZCdIaY1IJJAFz7zc0B+5Fmu7pWg0bjW6xWq20HCJWF+nXSeKQZcI16bqIUkQhEAnr0PdgeyzAMhqYvdABM/slEJr3hysg0f3mHXkvvgPwYZHqXP632n9zXvMSazeYOAJHE9/7UYXfQ9N0Cwt2E3bib8oPvsgpP8lDXxeWNV7l1WOs3wF5LL3dKXUEmrUggOi2K6Awxdoud5i/v9LM31d73eR0gQOKaEh+YOz01K3zC5qkjzL0LRqxGG+K0SI84N1GKCExqM/frH/RLybSU3OX8mkv0ml21EygK9LkAaf7yDo4eB+PnSDwvPOXHcq6o1TR9oeOF1XKP7eMLmugMMS/+cXa//JZbt/sfr5qNFEd2AH6bYvNXrreY+OqEfvfGposBMFV7Txc2s41v1l6m19zL1LcnA3DxzSqfz9B93QpAwvJH017SChkAd0r1nqbcoTahPdpCsGQMkuyxmNRm1O96Jyvc/kPDQzU+xcbJ4joAv4uDpmJXf5J9v/8c7G9Ertt9E6vRRvwSKVk705EtjcNqtHFzv3eS0GF3eJpwwtJH/sNkoYzLisbR4/A02XsVRgAmLInjpZNzEYgENB5uolvf7Snn1pAoT/QtNkWR0u4K2NxPzL0KA126bkJlIcRkj+t3f2yGq2YNFx/1hB5jD3W7GwDXSgsg7ecKwDXC9vU82km1nmmj19xLmDy0XxdJWO5qSXdPtwF4RNvu2xBJgpHmjMdpd6IvM3jKuDVMUUzxLXbWbGUHgL7cwJOoNtcAEJbke6QOl4cRqYjAbrHTdsFAr6WXPyn/Qu/9XqKnR3n6ceycGCTZY+nR93D7aLOnfN1u1/QS4aPfvbA6ySOyW99Nx1WXkPRfTwVAkuWaKg2X2j1ljOWuFjZn9hzPvOUl9pUly+sAdCV3cdhd27qb+xs5EvEHDBXtCIIFzNyVgT9SfiwH4MpGNSdnnKFTY0EkFZG+dYqX3ZSfuWaDuj2uWreZbRguu1rE9F9724LrRcYtHI/dYufU3L9iNdqQZI/1vMD4xVIyd073zBAOu4OWElft5y7JVfsUOy11WmdqhqLKarR5+qc0J4Yx4iCiM8S8fHY+kn/u34TdTF7/AmHyUNpVJjo1FiTZY3nl6iKS/tV75E1aIUMkFWFSm9EWt1C3+ya95l7iFo4nboHv3POM7dMIEAZ4EuYzd83w3IudE0Pa2wqP+Jbiu3QZu0nPSK9KTU1tddv1289+WPjhJ2/nv70uOkPMK1df9ivMH309fRhVHViNNp+jtpvrexu4nH8VkVSE3WLHbrHzvcqXfI4HbrTFLei+biXphzKvQexJTs8oR69uo7Cw8Hf5+fk/cV/3tXmfmJiccMugNzLn0EyvuW24+d9FZbSevQdA2i8UZL4/fcg+dYf1/HnNOWKlsWhvaxeFhIScdd/rt2ENCQlp/OD9/5oFULW5ZsjLv6fx0sm5KD/NYl5R9rAI7TM7UG12ddEd7+/Y9LhQeEp2cV7OvLJzZefmT1giZeGpeUMOZKQRIOBi7lWul94gJyenvKysLKe/jR8OHjj4VqQ4kjuleqq21IxooMOBbss9rpfeQCwWc+DAgY982fgVm5ycfO1Y0bFZgcJAanfUe+bBf0Q6d1s5s+MvCIVCioqKNiUnJx/3Zec/yQTk5uZWHj50eFagMJArG9Xc2Kd5mvnfhdub7/CHjV8hFAo5dOjQptzc3N/6s32uD1tFRUXK1WtWVwjDAln8zQKip0YNX7SDxGa2cWVNDZqSRo/QvLw8v0LhGTXrJi8vr/LY0WO/CwkKJaw6EqfDidP59/uC11Jyl5JpZ9GUNCKRSDh16tQzhUL//axf1Gp1VVdnFw9udBLdE0ZAUAAIISBgxA7c9KNDbeLqr2rRlbgWRdnZ2Zw4cWJTQkLCM4XCAD5Gy2QylU6ny1zV/AOC4lyZx4DAR8VHUrThYjvXfnPDs4QNCw9j29Zt5QUFBR8FBQX5HIx88VwRnjx5Urls2bKKeEUci67PBaDP1ucSGAA4IcAsoP1WB4IAAWnpaRhFBmxD+LzpTrncPtLE/fpOAMaIxrB+/fryLT/f8lFcXNxzi3TzTLHnz59XLs5dXNFl6WJuoZKJG7wX9X3WPjqqzWg+u03TFzpsD3px9joJl4YRlx2LODMKcVokofIQxoiDiJCHE0AAAgIJRIBF20WfuY9O7UM6ak3oq+6hv9hG12Mb8RhpDK+/9np5wc8KBiXymWK7u7vnf/755zmbN2/eZrFYUBbMJGPXFLrwPnhmruzk2tYbaM42ghNiJkj+02Fz9rUb2t8dbFAA46UxdUuXLru27PvL6pYuXXo6KChoQCdjfNFPrMFgmL9nz56cffv2bTMaXekPZcFMpuxKQYQICxYe6rpoKtbRcuwu+ouuhbxEImHnzp2b1q5d+1uA69evj1OpVJOqq6tl9fX1Mq1WK7NYLD6P84WHh+vkcrlOoVA0p6en67KyshpSU1ONQxX3TEwmk1IoFDoB54Qp8c7p+VOd8w5kO+ftVDqnrlY4x6ZFex27ixJHObdu3VpmMpn+bcSDGyHKeMq5wjGiMc7Fry5WHTx08JPOzs6F/t38Y+Gzz27dulVqtVoX6vX66cB0qVQaFxwcXJOSklKjUChqFArF5YiIiKF/2BlllFEGyv8BtHgbIdhlcf0AAAAASUVORK5CYII=
+" />
+
+<img alt="Embedded Image" src="data:image/png;base64,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
+" />
+
+<img alt="Embedded Image" src="data:image/png;base64,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
+" />]
+
+(if: $dalton is true)[
+
+<img alt="Embedded Image" src="data:image/png;base64,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" />
+
+<img alt="Embedded Image" src="data:image/png;base64,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" />
+
+<img alt="Embedded Image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAA7CAYAAADFJfKzAAAACXBIWXMAAA7EAAAOxAGVKw4bAAANjUlEQVRoge2aa1BUV7bHf/1AmjfNs4EWIQOxGY2PQG4ELcEMJjjB6CQmgQzJkFzGsUatYUqtsjKOkkysmDE1Y67G6FxzJRMiipjxzpgrSUxdSAygBQm+O4NG1EbaNC+hpWlo+twP9Ol0003TEJ26H/hXUfRZZ+191v+svddee+0Dk5jEJCYxiUlMYhJ3AZJ71XFzc7O6oaFB3djYqL587py65dIldXdfX3xLe7saUNuerUtISNCFhobqEhISdElJSddTU1N1aWlpZ5KTk/vulW13BZ9++mnqqoKClQkREXsB4Yf8xYcpG36ZuWBv1Qdl990t+36wZw0GQ+quXbtS3927N1Wn168U5aE+PmRFRjI7NJT82//mVV/lIac5091NtcFA9+CgXR4bGtz4YuEvGot/t/mNyMjIbydq64TJdnV1ZW7dujVr586dJWazGYCkwEDypk6loOfhiXbrhLLgUxy8cYPLRiMAvnI5a4uKan73+uurlUrlhfH2NyGy77zzTvqml1+u7ejqAmB5bCzbJI9OpCuvsVH4hKM3bwIQrgzlD69tzfj16tV14+ljXGTb2toy8/Lzsmqqa0oAFkREsM83dzxdeMR668cca2vz2G+R+Rgn29sByFy4sKa8vHx1bFycV172muznX3ye/vSTT9beMrQTrvDly/B8b5t6hRW9H3K+p8d+rY0r9Ki/oPMQ7SYT0VFRHK6szFi4cOGYXpZ6Y0jF4Yr0xdnZtbcM7WRHRbkQLZF+hqa1lBLpZ95054Ii8zHO9/SwICIClULhVZuTYc+SHRPDre++49HFi2srKirSx2ozJtmKwxXp+Xn5tWbzAGuSktjl81MXnYM3bjj9Hw/KQ05zsr0dtZ8f+3xz0ff3EyiXe9V2l/Qx1iQl0W8281x+fm1FRUW1YLXOGE3fI9m6urr05wsKaoeGhtio0bDGtMBF57CyARheagA2SU647UvTWoqmtZRVAx85ybdeuoRcIuFE2LN22YKICE9mOWGNaQEbU1KwDA3xwvPPZ9bV158XrFa3Xh6VbFtb24zlTzxh92hh7zy3ejubmwHYMmMGcomEo62tLjp7/L+0/642GMjqOAgMD1+LIFB8//0AvCb/XwAyIyO9IiqisOdh1iQn02828+SyZbS1ttYKVuuPR+qNSrYwP++pWwYDOSqVW4+KMA0NAbDEMIcclQqLIHA8sslJZ1pAAAAr1GpyY2LQ9/czu+2vnGxvR6VQUGQcdkRVWxsAP+tMtbddNfCRffR4wpq++eTExKA3GHjpxRcRhoae9opseXl5+sfVNa+E+viwQ5bj8SHRDgHlTeljABzR6Zx0lhjmANDQ2cmb0sdYoVZjtloBeDEhwa7XPjDAnNDQ7/ubUkO1wcDvz59nRe+HHu0A2CF9jFCFgqoTJzh44ECJYLU6pZouZE0mU+rGDetrAeqjfj7mA9R+fk7XCqnUvg6O1GvpG87tXxOy7fLdV67YiQE8pVbb74kjAhiO1oYDY9pTH54HwMubN2MyGrMd77mQraysTL2ma2VmcPCYHbtDjkoFwD/Cv3KSF0ybBsA2n2ry7hwFYHZICLcHB8lsL6fSNhqe7kqzt3m6Kw25ZDgVSFMqaR8YIO1W2Zg2zIyPp+XaNSqPHEl1lLuQ3bH9jysBKoOe9IpcgsPbB+xp4wfXrzvJxQB34Pp1mrq7iZgyhUOBP2NBRAS3zGa6BweZ4eYFiy9pXng4xcnJGC0WZt58z6NNlUOPAPDWzp0rBas1WpQ7kW1ubl7WePZcqriMTBQKqZSm7m4XeXZUFAO2uVqYmAjAPt9c+7LluNMRsXEwC7lEwp4rV1jVN59NKSlYBAFNa6lLIHREqK8vjV99RbNW+4AocyJ77NixNwFyY2NdGu/yO8kOxRcucnHOOkbM5XFxLjLAKSERIzCAyWIBoNVkonioyuUZBdOmYREESqSfUdDzMH+eMxzwftvUNCrhXHE6le63ByknsqdOneoE2GRZ5NSwLPgUuy5fZs+VK2zzqXa6J7PNKYvNYwAl1p8A8MG1a066I+exCLMg8JPISFQKBVV6vT1Yidg4mIVCKrVnaEsMc9DGFSKXSEYlLHI4+UWNe7Las2c73RlT6bCUlI0gEOHrC8At255WhNrPD21vr5Nsm1Zr/517uxKAgr7/BuDtKY9THZ5HoFzOvqtXXUbF+unTndoBnI/9hUfCAJdv6NyTbWlp6XDXoOXOnWHDbMPJcTgv/m42AP225ELEb5KTAezp4f9EfE3HwAAA8f7+XDYaORBymoauLqfkvyG6ALlEwu/Pn3fqT8zMLhuNbLNlWt4Qvt7R6Z5sd1+fW8/2W62E+viwybIIuUTi4l2AbhsREUs7HkSlUFBtMFAi/YyN584B8EhUFJ8onwFgxz//CUChQ2IhEgDsUTer46DT9u/IiJRUJDwymQG4bepXuiULuCULoAkKAoaDj9EWUBzhLpJWh+chl0g4eOMGA1Yrz8XHs9sWpO4LCKDH1o+7vHujRoNFEEhpLUXf309WZCQzbDb0WiyUh5x2ITzKht9es3IiG+KnGJWsODfF7KfQ9PfRVF2M0MYVoo0rZLNt/YPvdzZ+UvfpeWHvPKZIpQhAgEzGnimPc6G3Fx9bQHzDYf57QoDvFPdk40JDxiQLoFIoqO90VnXnbU+4cPs2ACar1e1cy+o4yIDVitLHhztDQyzpPgzAsrg4VqjV9FutLiuDO0wLD3dP9n5VtEuAEpeLaf7+dpmY1ewL/L4S0j4iGo+Fxu5u/GUyAF654FxCyu48hL6/nwUREdRF/Ry1nx9XbUHyNSGb14TsUWPHSKTExronOz85qRNwemNLOx5EG1foVPsVE4J9306shCtG85cSE8lRqegeHLSvrct7jqAzmUhTKu1z0HFjf8A2V8WVYaPwidtniBzmP/64e7I5q359EeCYrWTpCfPCwugeHHQJFN5A9Mga0wJ2yHJQSKXsb2nhGePf0Pb2ogkKosx/mV1ffDkS4NWLF4HvE42jo9gqcliSl/+NKHMi+8Aj2b0PxKka20csI+5Q6vcEAO9eveo1SRFGi4V5YWH26w3TpzMkCJy9fZtoX1+OBj/lpP9+SwuAvaIh7nxW/ehHAG7nbvvAALPjpzampKQYRZlLKPz3rKxGwL4N8wSVQoHOZAJA7TCnPUHMmMSXBXDBYQ39aUyMk/7KgY+4MzTE/YGB/OpOBkWJicMv67sPSA8PB5wzPEfbi4p+2egodyH7q5I/vBEd4O921zIS62xvGob3m96goasLx13VHv8v+bC1FT+ZDJlEwn6bF0U02U4dXrpvOBFaP5DJ/PBw7lgsPHfqFHKJxGUlaOruJjoygqINGw47yl3I+iUnf/v6q69mAPbC2GhY2vEg88LCCJTLWdU3f0yiYhASo/nfwhrZ0dyMXCLha9XzXBiROZWHnKbHNuSXdzxo7+ddxVKejY9HAlgEwalaItq87Y/b1/n5+TmVOkc9EcjUTK+u0X6TmaNSjVmH8hZz2v5Kv9Vqr/ZrWkuRSyT29BCGl7M3v/nGqd1YpwMiioeqqNLryZo3r6a6vj5r5P1Rq4ul/7V/dYjClyq9ntKgeq8e5gkrzcfot1rtmZPoPXFvKqLImI42rpA0pZKZwcFeEy0NqqdKryc0OJj95eW73emMSjYxI+PCwb/8Z4ZMKmGbVuuxKuANPrcV4WYGBzPz5ntYBIHts2bZd00jUea/zOvS0PHIJrZptchlMsoPHVqXmJhY4U7P44nAkhdeqCv7j50ZMtsWaqIQi+SRvr68f+3acGE8OZmlDvNwotgXWMdvm5qQy2S8X1a2bsmSJX8aTderU7zyXbvSC9aurQ2UyznlRXl1JLI6DqLv77dfFycnexXQxoJ4xCkSzc/PH5UoeHmKl79mTd2hPXv+IpfLJmTUvSCa3XmIY21tRCiVHK+qGpMoeEkWoOnGjcbeQYs9Nx0PAuVy5BIJm1JSfjDR9daP0bSWojOZmDd3Ll+fPbtu8eLFYxKFcRxGq1WqBp1en+ptdLzb2CQ5Yc+UAqZMoWTDhprikpLdPj4+boORO3jl2X/s35+u0+tTxWrFvwqHlQ0s7zmCprWUSp0OX5mM3zy6uOZyXd2zG7ZuzRoPUfDCs18cOZKek5dXe2dwkJ1z5466VPzJ93P+fvMmfjIZPYODKGQyHlIqSQ0LczrSGItcY2cn9Z2dTvM8OiCAwkVZNcWvvLo7JjV1XAQdMSpZk8mUWVpamrWhuLjEaDZ7DCxrLcc5cesWAhAb4M+ARHq43Wh0OTIcD6KDgy7mzpl7IXfu3Iu5xcUf+yQmjuvLGHdwIWswGDLfeuutrD1vv13SbkvC3RE9HtnEoevX7eWZiMBAtufn1xRu3rxbMnVqxaVLl8IbGhqSz5w5o9ZqteqWlha10WiMb2lpcfmcLzAwUJeQkKDTaDTXZ8+erUtLS2tOSUlxPQq82+jq6kqXy+UCIPw4OFhYm5Qk7H/oIWH7rFlCwbRpwszgYKfP7kKCg4UtW7ZUd3V1PXPPjbtHqMbDd4W+cpmQO3tGw3s7/ry3t7c3e/Ru/n/B7ZzdsmWLymw2Z+v1+lnALJW/f4zvzZtnkxYtOqvJyDir0WhOBwUFdf2LbZ3EJCYB/wcYHoDGrc0oNwAAAABJRU5ErkJggg==" />
+
+]
+</center>
+}
+
+
+{(if:$startedgame is not 1)[(css: "font-size: 35px")[(colour:black)[[[**Start**|Dream]] ] ] ]
+(if:$startedgame is 1)[(if:$gamestate is 1)[(css: "font-size: 35px")[(colour:black)[[[''Start a new game''|Dream]] ] ] ](else:)[(css: "font-size: 35px")[(colour:black)[|continue>[''Continue''] ] ](click: ?continue)[(go-to: $currentpassage)] ] ]}
+
+
+|About>[(display: "Open About")]
+
+|Options>[(display: "Open Options")]
+
+|Credits>[(display: "Open Credits")]
+
+|Extras>[(display: "Open Extras")]
+
+
+:: To-do {"position":"500,800","size":"100,100"}
+{(if: $fluency is 1)[You feel it's important to avoid censoring yourself. It can put you in awkward situations when you try too hard to push against a block, but you'd rather be true to your thoughts even if it means being awkward!(set:$covertness to 50)]
+(if: $fluency is 2)[You don't want to censor yourself, but sometimes the repercussions of ramming head-on against a block can be too much to handle. You try to strike a balance between saying what you want to and modifying your speech to seem more fluent.(set:$covertness to 50)]
+(if: $fluency is 3)[You feel it's important to be fluent and appear eloquent, even if it means censoring yourself at times. If it can help you have fewer stressful conversations, it's worth it, right?(set:$covertness to 50)]
+}
+
+Managing your sleep schedule and stress levels can help you have more good days, but sometimes it's just out of your control; judging by the fact that yesterday was full of blocks and you still feel that familiar tightness lingering in your throat, you already have a feeling that today's going to be rough.
+
+Finding an excuse to stay in bed just a little longer, you finish perusing your to-do list.
+
+You have two big events planned for today: your friend's birthday party, and a big job interview. You've split the day up into smaller steps:
+
+- Call the store to reserve your friend's birthday present
+- Pick up the present on your way to the restaurant
+- Meet your friends for lunch
+- Pick up your business attire at the dry cleaners
+- Get to your job interview
+
+How do you feel about all these commitments?
+
+(colour:$links)[- Excited!]<option1|
+(colour:$links)[- Nervous...]<option2|
+(colour:$links)[- All of the above?]<option3|
+{
+(click: ?option1)[(set: $feeling to 1) (goto: "Get Ready")]
+
+(click: ?option2)[(set: $feeling to 2) (goto: "Get Ready")]
+
+(click: ?option3)[(set: $feeling to 3) (goto: "Get Ready")]}
+
+
+
+:: Trivia End {"position":"1550,700","size":"100,100"}
+{(set:$movnum to 0)
+(if: $favmovie's 1st is "0")[(set:$movnum to 1)]
+(if: $favmovie's 1st is "1")[(set:$movnum to 1)]
+(if: $favmovie's 1st is "2")[(set:$movnum to 1)]
+(if: $favmovie's 1st is "3")[(set:$movnum to 1)]
+(if: $favmovie's 1st is "4")[(set:$movnum to 1)]
+(if: $favmovie's 1st is "5")[(set:$movnum to 1)]
+(if: $favmovie's 1st is "6")[(set:$movnum to 1)]
+(if: $favmovie's 1st is "7")[(set:$movnum to 1)]
+(if: $favmovie's 1st is "8")[(set:$movnum to 1)]
+(if: $favmovie's 1st is "9")[(set:$movnum to 1)]
+
+}(if:$trivia is 1)["(uppercase:$favmovie's 1st)... (uppercase:$favmovie's 1st)... (uppercase:$favmovie's 1st)-(uppercase:$favmovie's 1st)... ..."]{
+
+}(if:$trivia is 2)[(if: $movnum is 1)["Oh, I think I know what it is! Wait... it's on the tip of my tongue... it starts with a number..."](if:$movnum is 0)["Oh, I think I know what it is! Wait... it's on the tip of my tongue... it starts with (uppercase: $favmovie's 1st)..."]]
+
+Someone else excitedly shouts "(css: "text-transform: capitalize")[$favmovie]!" and gets the point.
+
+"...Yeah, that's what I was gonna say too."
+
+(if:$trivia is 1)[You feel a little dejected. At least they knew that you knew, right?]{
+}(if:$trivia is 2)[You feel a little dejected. You know that movie by heart, and it feels a little wrong to pretend that you forgot about it.]
+
+After a few more rounds (which you didn't know the answers to anyway), the game is put away and everyone slowly prepares to leave. 
+
+Among the last-minute chatter, (colour:$links)[[[your friends wish you good luck with your interview.|Dry Cleaning]]]
+
+
+:: Trivia Game {"position":"1550,600","size":"100,100"}
+{(if:$dessert is "cake" or "cream" or "fruit")[
+You lightly stutter your way through your order.
+(if:$dessert is "cake")[ "C... c-cake."]
+(if:$dessert is "cream")[ "I... i-ice c-cream."]
+(if:$dessert is "fruit")[ "F... f-fruit."]
+]
+(if: $dessert is "no")[You politely shake your head when the waitress comes by. Clementine notices, but she doesn't question you.]}
+
+Soon everyone is chit-chatting while enjoying drinks and dessert(if: $dessert is "no")[ (except for you)], and Clementine decides to christen your present. 
+Despite its name, it seems to be a fairly straightforward trivia game.
+
+She pulls out a card. "OK, the category is Movies!" (set: $favmovie to "")
+
+You focus intently as you listen to the clue she reads aloud. It hits you almost immediately: she's describing (colour:$links)[your favourite movie!]<favmovie| 
+{
+(click: ?favmovie)[(set: _default to " ") (for: each _i, ...(range:1,6))[(if: (trimmed: $favmovie) is "")[(set: $favmovie to (trimmed: (upperfirst:(prompt: "What's your favourite movie?", _default, "", "Confirm")))) (if: _i > 4)[(set: _default to "Birdemic")] ] ]
+(if: (trimmed: $favmovie) is "")[(set: $favmovie to "Birdemic")] (replace:?favmovie)[(colour:black)[your favourite movie!]]]
+}
+(more:)[The point is yours if you manage to say the answer out loud. Unfortunately, you feel a heavy block coming on...
+
+(colour:$verydysfluent)[- (Try to spit out the title anyway.)]<spit|
+(colour:$fluent)[- (Stall for time by pretending you forgot the title.)]<stall|]
+
+(click:?spit)[(set:$covertness to it -10)(set:$anxiety to it + 10)(set:$trivia to 1)(go-to:"Trivia End")]
+(click:?stall)[(set:$covertness to it +10)(set:$trivia to 2)(go-to:"Trivia End")]
+
+
+:: Typewriter {"position":"675,50","size":"100,100"}
+{
+  (set: $typewriterPos to 1)
+  //|typewriterOutput>[]//
+  (live: 30ms)[
+    (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+    (set: $typewriterPos to it + 1)
+    (if: $typewriterPos is $typewriterText's length + 1)[
+      (stop:)
+    ]
+  ]
+}
+
+
+:: Wake Up [todont] {"position":"500,600","size":"100,100"}
+You open your eyes.
+
+The sun is streaming into your room, blindingly bright. The radio is blaring out a song you don't recognize.
+It's morning!
+
+You lie awake for a moment, still reeling from your nightmare. You can only hope it won't be prophetic.
+
+You groggily glance at your to-do list for the day. You're going to be busy running around and speaking to quite a few people!
+
+Talking with people...
+
+(colour:$links)[- really energizes you!]<option1|
+(colour:$links)[- is very nice, in moderation.]<option2|
+(colour:$links)[- has never been your strong suit...]<option3|
+
+{(click: ?option1)[(set: $liketalk to 1) (set: $anxiety to 0) (goto: "Morning")]
+
+(click: ?option2)[(set: $liketalk to 2) (set: $anxiety to 10) (goto: "Morning")]
+
+(click: ?option3)[(set: $liketalk to 3) (set: $anxiety to 20) (goto: "Morning")]}
+
+
+:: z1st day of school [cut/leftovers] {"position":"3325,50","size":"100,100"}
+You set out for school, 
+
+Absentmindedly looking out the window of your mom's car, you think about the day that awaits you. You feel[...]<ellipses|
+[
+[...excited!]<choice1|
+[...apprehensive.]<choice2|
+]<choices|
+
+(click: ?choice1)[(display: "DisplayTest")(replace: ?ellipses)[ excited!](replace: ?choices)[]](click: ?choice2)[(display: "DisplayTest")(replace: ?ellipses)[ apprehensive.](replace: ?choices)[]]
+
+
+:: zBus (with green option) [cut/leftovers] {"position":"3525,650","size":"100,100"}
+
+
+{(either: "(colour: $fluent)[[- \"Good morning!\"]<2nd|(set: $2nd to 'G')]",
+"(colour: $dysfluent)[[- \"Good morning!\"]<2nd|(set: $2nd to 'Y')]",
+"(colour: $verydysfluent)[[- \"Good morning!\"]<2nd|(set: $2nd to 'R')]")
+(click: ?2nd)[(set: $cli to 2) (goto: "On the Bus")]}
+{(either: "(colour: $fluent)[[- \"Hello!\"]<1st|(set: $1st to 'G')]",
+"(colour: $dysfluent)[[- \"Hello!\"]<1st|(set: $1st to 'Y')]",
+"(colour: $verydysfluent)[[- \"Hello!\"]<1st|(set: $1st to 'R')]")
+(click: ?1st)[(set: $cli to 1) (goto: "On the Bus")]}
+{[(colour:$links)[- (Stay silent.)]]<3rd|
+(click: ?3rd)[(set: $cli to 3) (goto: "On the Bus")]} ]
+
+
+:: zCharacter selection (for future use) [cut/leftovers] {"position":"3325,250","size":"100,100"}
+You lie awake for a moment, recovering from your bad dream. You take a moment to think about the busy day that's ahead of you. You are...
+
+... a young [university student]<stu| with a busy schedule.
+
+... 
+
+
+
+(click: ?stu)[(set: $id to "student") (goto: "1st morning")]
+
+
+:: zChild Dream [cut/leftovers] {"position":"3225,150","size":"100,100"}
+Thump! Thump! Thump! Thump! Thump!
+
+Your footsteps echo against the stone floor as you run through the twisty little passages of mysterious cave.
+
+You saw the exit just a moment ago, but now... it's gone?!
+
+Suddenly, you sense something near you. It's...
+
+...a unicorn!
+
+...a dinosaur!
+
+...an alien!
+
+
+
+:: zChild Dream 2 [cut/leftovers] {"position":"3325,150","size":"100,100"}
+[Neeeeeeiiiiiiiighhhh!
+With a flick of his mane and a flash of his horn, the unicorn teleports you away. You look around and realize you're in the land of unicorns!
+The unicorn queen is there. You make sure to bow to her.
+"We need your help! The evil lord captured our prince, and we can't enter his lair!"
+
+I'll do it!
+Not my problem!
+
+Oh thank you! What is your name, brave hero?
+
+How dare you? Tell me your name, human, so that we may curse it forever]
+
+[]
+
+[]
+
+
+:: zChild Dream End [cut/leftovers] {"position":"3425,150","size":"100,100"}
+You prepare to enter the villain's lair (which, coincidentally, looks just like your school).
+
+The unicorns' encouraging chants seem to follow you as you sneak down the empty, menacing hallways.
+
+$name! $name! $name! $name!
+
+
+:: zChild Wakeup [cut/leftovers] {"position":"3425,50","size":"100,100"}
+"$name!"
+
+"Whuh?"
+
+"Wake up!" You feel your body being jostled.
+
+"But the unicorn..."
+
+You still have one hand on the villain's door. Just a little more and you'll have saved the day!
+
+The fog in your head is blown around by a raucous laugh.
+
+"Come on, breakfast's almost ready! But if you want me to have your pancakes... "
+
+Your eyes finally focus on your dad, and your empty stomach growls. The unicorn is but a distant memory as you wiggle out of your covers and start getting dressed!
+
+You slip on...
+
+
+
+
+
+
+:: zClick Template [cut/leftovers] {"position":"3325,550","size":"100,100"}
+[]<option1|
+
+[]<option2|
+
+[]<option3|
+
+(click: ?option1)[(set: $ to 1) (goto: "")]
+
+(click: ?option2)[(set: $ to 2) (goto: "")]
+
+(click: ?option3)[(set: $ to 3) (goto: "")]
+
+
+
+{(if: $ is 1)[]
+
+(if: $ is 2)[]
+
+(if: $ is 3)[]}
+
+
+:: zCoffee - Cut? [cut/leftovers] {"position":"3225,550","size":"100,100"}
+You feel a block coming on as you prepare to give your order. How do you want to handle it?
+
+- Try to push through
+- Try to circumvent the block
+
+
+:: zColour Codes [cut/leftovers] {"position":"3425,650","size":"100,100"}
+Full-colour
+
+Fluent: (colour:#00c400)
+Dysfluent: (colour: #dbd400)
+Very dysfluent: (colour: red)
+
+Colourblind
+
+Fluent: (colour: #1E88E5)
+Dyfluent: (colour: #FFC107)
+Very dysfluent: (colour: #D81B60)
+
+(colour:#803713)?
+
+
+:: zCurly Braces (from before I figured out how to make them on my keyboard) [cut/leftovers] {"position":"3525,550","size":"100,100"}
+{}
+
+
+:: zDisplayTest [cut/leftovers] {"position":"3525,150","size":"100,100"}
+(live: 1s)[Test 1(stop:)]
+(live: 2s)[Test 2(stop:)]
+(live: 5s)[Test 5(stop:)]
+
+
+:: zEmpty Random Model [cut/leftovers] {"position":"3625,50","size":"100,100"}
+{(either: "(colour: green)[[  ]<1st| (set: $1st to 'G')]",
+"(colour: yellow)[[  ]<1st| (set: $1st to 'Y')]",
+"(colour: red)[[  ]<1st| (set: $1st to 'R')]")
+(click: ?1st)[(set: $cli to 1) (goto: "reply")]}
+
+{(either: "(colour: green)[[  ]<2nd| (set: $2nd to 'G')]",
+"(colour: yellow)[[  ]<2nd| (set: $2nd to 'Y')]",
+"(colour: red)[[  ]<2nd| (set: $2nd to 'R')]")
+(click: ?2nd)[(set: $cli to 2) (goto: "reply")]}
+
+{(either: "(colour: green)[[  ]<3rd| (set: $3rd to 'G')]",
+"(colour: yellow)[[  ]<3rd| (set: $3rd to 'Y')]",
+"(colour: red)[[  ]<3rd| (set: $3rd to 'R')]")
+(click: ?3rd)[(set: $cli to 3) (goto: "reply")]}
+
+{(either: "(colour: yellow)[[  ]<4th| (set: $4th to 'Y')]",
+"(colour: red)[[  ]<4th| (set: $4th to 'R')]")
+(click: ?4th)[(set: $cli to 4) (goto: "reply")]}
+
+
+:: zFailed "Dark Mode" [cut/leftovers] {"position":"3325,450","size":"100,100"}
+(colour:black)[|dark>[(checkbox: 2bind $dark, "Dark mode")]] (Not ready to use){
+	(click-rerun: ?dark)[
+		(unless: $dark)[<script>setTheme("dark")</script>]
+		(else:)[<script>setTheme("")</script>]
+	]
+}
+
+
+:: zInterview Talk [cut/leftovers] {"position":"3325,650","size":"100,100"}
+Your friends all wish you luck and share a few generic tips. 
+You admit your concern about potentially stuttering during the interview, on top of the usual challenge of finding the right things to say.
+
+Jamie speaks up. "Hey that's okay, I do it too!"
+
+"Really?"
+This is a shock. Did Jamie share your struggles all along?
+
+"Yeah, most people stutter when they're nervous! You just can't let it get to you. I'm sure you'll do great."
+
+...Oh. You know he has good intentions, but it seems he completely misunderstood what you meant!
+
+(colour:$links)[- (Set the record straight.)]<yes|
+(colour:$links)[- (Let it slide.)]<no|
+
+(click:?yes)[(set:$covertness to it - 40)(set:$jamiecorrect to 1)(go-to: "Dry Cleaning")]
+(click:?no)[(set:$covertness to it + 10)(set:$jamiecorrect to 2)(go-to: "Dry Cleaning")]
+
+(if:$jamiecorrect is 1)[Doing your best not to sound preachy, you try to explain that your stutter is a medical condition. You're not sure he fully understands, but he seems supportive!]
+(if:$jamiecorrect is 2)[You shrug. "Yeah, I guess you're right. Thanks, Jamie!"]
+
+
+
+
+:: zJob interview bits + achievement script [cut/leftovers] {"position":"3225,650","size":"100,100"}
+The stress of all your failed interactions today is really weighing on you. You feel like your stutter is worse than ever!
+
+Uncharacteristically, you
+
+Staying true to your --, 
+
+variable: interviewer's impression
+
+low anxiety = better answers
+
+Positive: You can keep up the façade, for now. But someday, you will fail. How will your bosses react, once that happens?
+
+
+-
+
+<script>showAch("ach1")</script>{
+
+}(if:$resolution is 1)[(replace: ?AchTxt1)[(css: "font-size: 20px")[(text-style:"underline")[  ''Normal''  ]
+Eat a delicious meal]] (set:$AchSatisfied to 1)]{
+
+}(if:$resolution is 2)[(replace: ?AchTxt1)[(css: "font-size: 20px")[(text-style:"underline")[  ''Satisfied''  ]
+Eat a delicious meal]] (set:$AchSatisfied to 1)]{
+
+}(if:$resolution is 3)[(replace: ?AchTxt1)[(css: "font-size: 20px")[(text-style:"underline")[  ''Satisfied''  ]
+Eat a delicious meal]] (set:$AchSatisfied to 1)]
+
+
+:: zLooong game instructions [cut/leftovers] {"position":"3525,450","size":"100,100"}
+As you're all enjoying drinks and dessert (if: $dessert is "none")[(except for you)], Clementine decides to christen her brand new game.
+
+She opens the box and reads the instructions aloud.
+
+"Everyone plays as a team and the goal is to get the most points collectively.
+On your turn, draw a card and announce the category.
+Flip the sand timer, and read 1 of the 3 clues out loud.
+If your team guesses correctly at this stage, you get the maximum amount of points. If you think they need extra help, you can share more clues - but each one deducts from your point reward!
+Continue in clockwise order until everyone has had a turn, then add up all the points."
+
+"Ok, that sounds good! Who should start?"
+
+"Uh, let me check...
+Oh! The first player is the one who most recently had a birthday."
+
+She laughs.
+
+"Here I go, then!"
+
+She draws a card.
+
+"The category is: video games"
+
+He sets the timer as his eyes scan the card. 
+
+- Try to read the 2nd clue
+- Try to read the 3rd clue
+
+You read out the card
+
+"Turns to you. Ok, your turn! You against Lee (or everyone?).
+
+
+:: zOld 1st morning [cut/leftovers] {"position":"3425,350","size":"100,100"}
+{(if: $schoolwell is 1)[Your first year went well, and you're happy with your grades. You'll surely be able to maintain them if you keep up the good work this year.]
+
+(if: $schoolwell is 2)[Your first year wasn't great - you underperformed, and you know you could have done better. You'll certainly turn things around this year!]}
+
+(if: $schoolwell is 1)[All things considered, you're in a very good position right now. But there's one thing that still bothers you:](if: $schoolwell is 2)[Despite some slight hiccups in your academic performance last year, you know that you're on the right track to succeed. There's just one thing that really worries you:]
+
+Your stutter.
+
+You've been a stutterer for years, so it's not exactly a novel situation, but you realized recently that you barely know anything about your disorder. It's been a constant obstacle, but one you've never dared to tackle head-on. 
+As you keep developing your social and professional spheres, good communication is going to become an increasingly important part of your life. You're determined to start paying closer attention to your stuttering patterns so that you can become a better communicator.
+
+Fortunately for you, your stutter is only occasional, meaning you often have moments of fluency.
+Unfortunately, that also means your stutter can be very unpredictable. Blocks can occur seemingly randomly -- a word you had no problem saying yesterday, or even just moments ago, might suddenly give you a hard time.
+
+Your gaze falls to your radio alarm clock, which is now playing the Beatles' *Good Morning*. "That's enough contemplation for now," you tell yourself as you turn it off. You have to start getting ready!
+
+You step out of bed and pick out your clothes for the day. What do you decide to wear?
+
+[Good old t-shirt and jeans - a classic look.]<tshirt|
+
+[A button-down shirt and dress pants - classy and versatile.]<bdshirt|
+
+[A tank top, sleeveless vest and capri pants - stylish and cool.]<ttop|
+
+[A dress and stockings - both elegant and cute.]<dress|
+
+(click: ?tshirt)[(set: $clothes to "tshirt") (goto: "Going out 1")]
+(click: ?bdshirt)[(set: $clothes to "bdshirt") (goto: "Going out 1")]
+(click: ?ttop)[(set: $clothes to "ttop") (goto: "Going out 1")]
+(click: ?dress)[(set: $clothes to "dress") (goto: "Going out 1")]
+
+
+:: zOld About [cut/leftovers] {"position":"3325,350","size":"100,100"}
+^^*Dysfluent* puts you in the shoes of someone who stutters. The dialogue system is altered to reflect this; as is common in stutterers, you can usually feel whether a certain word or phrase is going to give you trouble.^^
+^^A (colour: green)[green] dialogue option is one that you're confident you'll be able to enunciate fluently, without stuttering.^^
+^^A (colour: yellow)[yellow] dialogue option is likely to be distorted to some degree by your stutter.^^
+^^A (colour: red)[red] dialogue option will be affected by a major block and you'll have a hard time getting the words out.^^
+^^The colour of the dialogue options is randomized, not predetermined. This means that options (colour: green)[A], (colour: yellow)[B] and (colour: green)[C] from your first playthrough might become (colour: red)[A], (colour: red)[B] and (colour: yellow)[C] in the second. Some days are just tougher to get through than others - that's life!^^
+
+
+:: zOldTutorial [cut/leftovers] {"position":"3525,50","size":"100,100"}
+
+
+
+:: zRandom Choice Model [cut/leftovers] {"position":"3625,150","size":"100,100"}
+{(either: "(colour: green)[I say [this]<1st| (set: $1st to 'G')]",
+"(colour: yellow)[I say [this]<1st| (set: $1st to 'Y')]",
+"(colour: red)[I say [this]<1st| (set: $1st to 'R')]")
+(click: ?1st)[(set: $cli to 1) (goto: "reply")]}
+
+{(either: "(colour: green)[I say [that]<2nd| (set: $2nd to 'G')]",
+"(colour: yellow)[I say [that]<2nd| (set: $2nd to 'Y')]",
+"(colour: red)[I say [that]<2nd| (set: $2nd to 'R')]")
+(click: ?2nd)[(set: $cli to 2) (goto: "reply")]}
+
+{(either: "(colour: green)[[I say something else]<3rd| (set: $3rd to 'G')]",
+"(colour: yellow)[[I say something else]<3rd| (set: $3rd to 'Y')]",
+"(colour: red)[[I say something else]<3rd| (set: $3rd to 'R')]")
+(click: ?3rd)[(set: $cli to 3) (goto: "reply")]}
+
+{(either: "(colour: yellow)[I just [introduce myself]<4th| (set: $4th to 'Y')]",
+"(colour: red)[I just [introduce myself]<4th| (set: $4th to 'R')]")
+(click: ?4th)[(set: $cli to 4) (set: $name to (upperfirst: (prompt: "What's your name?", " "))) (goto: "reply")]}
+
+
+:: zRandom Choice Reply [cut/leftovers] {"position":"3625,250","size":"100,100"}
+{(if: $cli is 1)[
+(if: $1st is "G")["This!" (set: $1st to "W")] 
+(if: $1st is "Y")["T-t...this!" (set: $1st to "W")] 
+(if: $1st is "R")["...T...t...t...t-t-this!" (set: $1st to "W")]
+(set: $cli to 0)]
+
+(if: $cli is 2)[
+(if: $2nd is "G")["That!" (set: $2nd to "W")] 
+(if: $2nd is "Y")["T-t...that!" (set: $2nd to "W")] 
+(if: $2nd is "R")["...T...t...t...t-t-that!" (set: $2nd to "W")] 
+(set: $cli to 0)]
+
+(if: $cli is 3)[
+(if: $3rd is "G")["Something else!" (set: $3rd to "W")] 
+(if: $3rd is "Y")["S-s...something else!" (set: $3rd to "W")] 
+(if: $3rd is "R")["...S...s...s...s-s-something else!" (set: $3rd to "W")]
+(set: $cli to 0)] 
+ 
+(if: $cli is 4)[
+(if: $4th is "Y")["(print: $name's 1st)-(print: $name's 1st)-(print: $name's 1st)-(print: $name)!" (set: $4th to "W")] 
+(if: $4th is "R")["...(print: $name's 1st)...(print: $name's 1st)...(print: $name's 1st)...(print: $name's 1st)-(print: $name's 1st)-(print: $name's 1st)-(print: $name's 1st)-(print: $name)!" (set: $4th to "W")]
+(set: $cli to 0)]
+}
+
+
+:: zRandom Model [cut/leftovers] {"position":"3625,350","size":"100,100"}
+(either:"(colour: red)[I say [[This->zReply Test]]] (set: $1stcolour to 'red')","(colour: green)[I say [[This->zReply Test]]] (set: $1stcolour to 'green')","(colour: yellow)[I say [[This->zReply Test]]] (set: $1stcolour to 'yellow')")
+
+(either:"(colour: red)[I say [[That->zReply Test]]]","(colour: green)[I say [[That->zReply Test]]]","(colour: yellow)[I say [[That->zReply Test]]]")
+
+(either:"(colour: red)[I say [[Else->zReply Test]]]","(colour: green)[I say [[Else->zReply Test]]]","(colour: yellow)[I say [[Else->zReply Test]]]")
+
+
+:: zReplace [cut/leftovers] {"position":"3425,550","size":"100,100"}
+[- [Get up]<getup|
+
+- [Snooze]<snooz|]<bedchoice|
+
+(click: ?getup)[(replace: ?bedchoice)[You decide to get up and start your day.]]
+
+(click: ?snooz)[(replace: ?bedchoice)[You decide to get a bit more sleep.]]
+
+
+:: zReply Test [cut/leftovers] {"position":"3625,450","size":"100,100"}
+(if: $1stcolour is "green")["Hello! How are you?" (set: $1stcolour to "white")] (if: $1stcolour is "yellow")["H-h-h-hello, h-how ar... ar... are you?" (set: $1stcolour to "white")] (if: $1stcolour is "red")[You open your mouth, but no sound comes out. Your throat strains against the word, to no avail. (set: $1stcolour to "white")]
+
+
+:: zScraps from Friend lunch [cut/leftovers] {"position":"3425,450","size":"100,100"}
+- All right, tell us your best joke!
+
+Everyone is looking at you expectantly.
+
+A couple of your closest friends are here, as well as a couple of new faces. (if:$liketalk is 1)[You're looking forward to getting to know them!](if:$liketalk is 2)[You hope you'll get along with them!](if:$liketalk is 3)[You're usually a little apprehensive about chatting with strangers, but you've got a good feeling about this hangout.]
+
+Now's your chance to make a joke - do you want to take it?
+- Yes
+- No
+--- cuts you off
+
+
+
+:: zSnooze system (cut out for now) [cut/leftovers] {"position":"3225,250","size":"100,100"}
+It's still just 6:03 AM and your first class isn't until 8. It takes you about 45 minutes to get to school. Do you want to roll out of bed now and get an early start, or snooze a little more?
+
+[Get up.]<getup|
+
+[Snooze 15 minutes]<snooz15|
+
+[Snooze 30 minutes.]<snooz30|
+
+(click: ?getup)[(set: $snooz to 0) (goto: "1st morning 2")]
+
+(click: ?snooz15)[(set: $snooz to 1) (goto: "1st morning 2")]
+
+(click: ?snooz30)[(set: $snooz to 2) (goto: "1st morning 2")]
+
+(set: $tired to 5, $stress to 5)
+
+----
+
+{(if: $snooz is 2)["Hey, why not?" you tell yourself as you hit the snooze button. You still feel tired after all, and you have a long day ahead of you. Better safe than sorry, right?(set: $tired -5)]
+
+(if: $snooz is 1)["All right, but I don't want to stay in bed *too* long," you tell yourself. You feel tired, but you could also use a bit of extra time before leaving, to relax and make sure you look great for your first day.(set: $tired -2, $stress -2)]
+
+(if: $snooz is 0)["No time for that!" you tell yourself. Getting an early start is probably the best way to make sure you're 110% ready for school and socialization. You may feel a bit tired, but it'll be worth it.(set: $stress -5)]}
+
+(if: $snooz is 2)[You wake up half an hour later, feeling relatively well-rested and ready for school.] (if: $snooz is 1)[You wake up 15 minutes later, ]
+
+------
+{(if: $snooz is 2)[Thanks to the extra sleep you managed to get, you feel pretty good and ready to tackle the day.]
+(if: $snooz is 1)[You feel pretty good thanks to the extra sleep you got, in addition to the extra time you had to get prepared]
+(if: $snooz is 0)[By getting up early instead of snoozing, you had extra time to make yourself look your best, and you were even able to relax and have a bit of fun before leaving the house.]}
+
+
+:: zStartup [cut/leftovers] {"position":"3225,450","size":"100,100"}
+{
+<!-- This passage is tagged "startup" so it will be run first, even before the "Start Story Here" passage -->
+
+<!-- We can initialize all our Harlowe variables here -->
+(set: $name to "")
+(set: $bestfood to "")
+(set: $worstfood to "")
+(set: $expletive to "")
+(set: $favmovie to "")
+(set: $call to false)
+(set: $store to false)
+(set: $lunch to false)
+(set: $clean to false)
+(set: $job to false)
+
+<!-- Custom Macro for prompts. The parameters are: "prompt", "max", "default". -->
+<!-- The "prompt" is a string which will be used as the question asked in the prompt dialog box. -->
+<!-- The "max" is a number (no greater than 48) which sets the max number of times the user can enter a blank value. -->
+<!-- The "default" is a string which will be used if the user doesn't enter a value after "max" times. -->
+<!-- When finished, the mPrompt Macro sets a global variable called "$response" which you can then use. -->
+<!-- Example usage: ($mPrompt: "What's your name?", 5, "nobody")(set: $name to (upperfirst: $response)) -->
+(set: $mPrompt to (macro: str-type _prompt, num-type _max, str-type _default, [
+	(out:)[(set: _response to "")(set: _def to "")
+		(for: each _i, ...(range: 1, _max)) [
+			(if: (trimmed: _response) is "")[
+				(set: _response to (prompt: _prompt, _def, ""))
+				(if: _i > _max-2)[
+					(set: _def to _default )
+				]
+			]
+		]
+		(if: (trimmed: _response) is "")[(set: $response to _default)]
+		(else:)[(set: $response to _response)]
+	]
+]))
+
+}
+
+
+:: zTherapist question [cut/leftovers] {"position":"3525,350","size":"100,100"}
+She asks you.
+
+"If you had to describe to someone else what it's like to stutter, what would you say?"
+
+You're taken aback by the question. You realize that no one had ever asked you how it felt.
+
+You tell her everything you wish your loved ones knew about your stutter. HHow complete blocks make you feel like 
+
+
+:: zTitle Screen Switch [cut/leftovers] {"position":"3625,550","size":"100,100"}
+(if: (saved-games:) contains "Slot A")[(go-to: "Title Screen Permanent")]
+
+
+:: zUntitled Passage 1 [cut/leftovers] {"position":"3525,250","size":"100,100"}
+(set:$name to "Ally")
+
+It's (live:2.3s)[nice (stop:)](live:2.6s)[t- (stop:)](live:2.9s)[to (stop:)](live:3.2s)[meet ](live:3.5s)[you (stop:)](live:3.8s)[(set:$conv to 'allystutter')(print: $name's 1st)-(stop:)](live:4.1s)[(print: $name's 1st)-](live:4.4s)[(text-style:"rumble")[(print: $name's 1st)-](stop:)](live:4.7s)[(text-style:"rumble")[(print: $name's 1st)-](stop:)](live:5s)[(text-style:"rumble")[(print: $name's 1st)-](stop:)](live:5.3s)[(text-style:"rumble")[(print: $name's 1st)-](stop:)](live:5.6s)[(text-style:"rumble")[(print: $name's 1st)-](stop:)](live:6s)[$name!(stop:)]
+
+
+(text-style:"shudder")[Allyson]
+
+(text-style:"rumble")[Allyson]
+
+(text-style:"rumble")[(text-style:"shudder")[(text-style:"shudder")[Allyson]]
+
+(text-style:"rumble")[(live:5s)[(text-style:"shudder")][Allyson]]]
+
+(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[(text-style:"shudder")[Allyson]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
+(text-style:"rumble")[(text-style:"rumble")[(text-style:"rumble")[Allyson]]]
+
+(text-style:"expand")[(text-style:"expand")[(text-style:"expand")[(text-style:"expand")[(text-style:"expand")[(text-style:"expand")[(text-style:"expand")[(text-style:"expand")[(text-style:"expand")[(text-style:"expand")[(text-style:"expand")[(text-style:"expand")[(text-style:"expand")[(text-style:"expand")[(text-style:"expand")[(text-style:"expand")[(text-style:"expand")[(text-style:"expand")[(text-style:"expand")[(text-style:"expand")[(text-style:"expand")[(text-style:"expand")[(text-style:"expand")[Allyson]]]]]]]]]]]]]]]]]]]]]]]
+
+(text-style:"condense")[(text-style:"condense")[(text-style:"condense")[(text-style:"condense")[(text-style:"condense")[(text-style:"condense")[(text-style:"condense")[(text-style:"condense")[(text-style:"condense")[(text-style:"condense")[(text-style:"condense")[(text-style:"condense")[(text-style:"condense")[(text-style:"condense")[(text-style:"condense")[(text-style:"condense")[(text-style:"condense")[(text-style:"condense")[(text-style:"condense")[(text-style:"condense")[(text-style:"condense")[(text-style:"condense")[(text-style:"condense")[Allyson]]]]]]]]]]]]]]]]]]]]]]]
+
+
+(text-rotate-x:45)+(text-rotate-y:24)+(text-rotate-z:23)[ALLYSON]
+
+
+
+:: zUntitled Passage 4 [cut/leftovers] {"position":"3225,350","size":"100,100"}
+<center><img alt="Embedded Image" src="data:image/png;base64,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
+YII=" />
+
+
+:: zyear [cut/leftovers] {"position":"3425,250","size":"100,100"}
+(set: $year to (num:(substring: (current-date:), -1, -4)))
+
+(print: (substring: (current-date:), -6, -7))
+
+(print: $year - 50)
+
+(current-time:)
+
+
+
+:: StoryScript [script]
+window.Harlowe = { 'Engine': Engine, 'State' : State };
+
+window.setTheme = function(themeName) {
+	document.documentElement.setAttribute('theme', themeName)
+}
+
+window.setA11y = function(a11yName) {
+	document.documentElement.setAttribute('a11y', a11yName)
+}
+
+window.getStoragePrefix = function () {
+	//return "(Saved Game " + Engine.options.ifid + ") ";
+  	return "(Saved Game CAB07C18-1954-43AF-A3B2-5DCAAA38A621) "
+}
+
+window.deleteSaveSlot = function (slotName) {
+	localStorage.removeItem(getStoragePrefix() + slotName);
+}
+
+window.showAch = function(achName) {
+	document.getElementsByName(achName)[0].style.display = "block";
+}
+
+window.toDone = function(todoName) {
+//	if (Harlowe.State.variables[todoName]) { alert(1)};
+	document.getElementsByName(todoName)[0].classList.add("strike");
+}
+
+window.toDoCheck = function() {
+	const AllToDos = ["call", "store", "lunch", "clean", "job"];
+	for (let todoName of AllToDos) {
+		if (Harlowe.State.variables[todoName]) {
+			document.getElementsByName(todoName)[0].classList.add("struck");
+        }
+    }
+}
+
+window.goHome = function() {
+	var oHomeTxt = document.getElementsByName('home')[0]
+	oHomeTxt.style.color = "#4169E1";
+	oHomeTxt.style.cursor = "pointer";
+	oHomeTxt.onclick = function(){
+		Engine.goToPassage('Title Screen Permanent');
+	};
+}
+
+:: StoryStylesheet [stylesheet]
+
+:root {
+//	--bgcolor: white;
+}
+
+:root[theme='dark'] {
+//	filter: invert(1) brightness(0.6);
+}
+
+:root[a11y='dalton'] {
+//	filter: hue-rotate(90deg);
+}
+
+body {
+	margin-left: 250px;
+	background-color: black;
+}
+
+tw-story:not([tags~="s"]) .link:hover {
+	text-decoration: underline;
+}
+
+tw-story:not([tags~="s"]) tw-link:hover {
+	text-decoration: underline;
+}
+
+tw-sidebar tw-icon {
+	display: none;
+}
+
+tw-sidebar {
+	background-color: #d3d3d3;
+	position: fixed;
+	top: 0;
+	left: 0px;
+	height: 100%;
+	width: 250px;
+	justify-content: space-evenly;
+	overflow: auto;
+}
+ 
+tw-story {
+	background-color: White;
+	color: Black;
+	padding: 5%;
+}
+
+tw-story[tags~="s"] {
+	margin-left: -250px;
+	width: 100vw;
+}
+
+tw-story[tags~="s"] tw-sidebar {
+	display: none;
+}
+
+tw-story[tags~="n"] {
+	background-color: Black;
+	color: White;
+}
+
+tw-story[tags~="f"] {
+	background-color: LightGrey;
+	color: Black;
+}
+
+tw-link {
+	 font-weight: normal;
+}
+
+tw-link:hover {
+    color: inherit;
+}
+
+tw-hook {
+	 font-weight: normal;
+}
+
+tw-hook[style*="colour:"] tw-link, tw-hook[style*="colour:"] .enchantment-link {
+	color: inherit;
+}
+
+.visited:hover {
+    color: inherit;
+}
+
+tw-hook[name="ach1"] {
+	display: none;
+	animation: fade-out 2s 15s forwards;
+}
+
+tw-hook[name="ach2"] {
+	display: none;
+	animation: fade-out 2s 15s forwards;
+}
+
+tw-hook[name="achtxt1"] {
+	display: block;
+	line-height: 0.9;
+}
+
+tw-hook[name="achtxt2"] {
+	display: block;
+	line-height: 0.9;
+}
+
+tw-hook[name="achbox"] {
+	background-color: white;
+	display: flex;
+	justify-content: center; /* Align horizontal */
+	align-items: center; /* Align vertical */
+	margin-left: 20px;
+	padding: 20px;
+	width: 200px;
+	height: 100px;
+	border: solid 1px black;
+	animation: slide-in 2s ease-out, fade-out 2s 15s forwards;
+}
+
+@keyframes slide-in {
+	from {
+		height: 0px;
+		font-size: 1pt;
+		padding: 0px;
+		transform: translateX(-250px);
+	}
+}
+
+@keyframes fade-out {
+	to {
+		opacity: 0%;
+		height: 0px;
+		font-size: 1pt;
+		padding: 0px;
+		display: none;
+	}
+}
+
+
+tw-story[tags~="todont"] tw-hook[name="todo"] {
+	display: none;
+}
+
+tw-hook[name="todo"] {
+	background-color: LightYellow;
+	display: flex;
+	text-align: left; /* Align left */
+	margin-left: 20px;
+	padding: 20px;
+	width: 200px;
+	border: solid 1px black;
+}
+
+tw-hook[name="todo"] ul {
+	margin-block: 2px;
+	margin-inline: 0px;
+	padding-inline-start: 10px; 
+}
+
+.strike::after {
+	content: ' ';
+	position: absolute;
+	top: 45%;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: dimgray;
+	animation: strike 1s forwards; 
+}
+
+@keyframes strike{
+  0%   { width : 0; }
+  100% { width: 100%; }
+}
+
+
+.struck::after {
+	content: ' ';
+	position: absolute;
+	top: 45%;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: dimgray;
+}
